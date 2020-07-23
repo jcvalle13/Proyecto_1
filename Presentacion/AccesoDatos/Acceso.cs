@@ -13,8 +13,11 @@ namespace AccesoDatos
     public class Acceso
     {
         #region Atributos
-        //Configuracion a base de datos Joiner Proyecto1_Globo
-        private string strconexion = Properties.Settings.Default.Glovo;
+        //Configuracion string de conexion Joiner Proyecto1_Globo
+        private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
+        
+        //Configuracion string de conexion a base de datos Steph Glovo
+        //private string strconexion = Properties.Settings.Default.Glovo;
         private SqlConnection objconexion;
         #endregion
 

@@ -32,5 +32,15 @@ namespace AccesoDatos.Properties {
                 return ((string)(this["Glovo"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JOY;Initial Catalog=Proyecto1_Globo;User ID=sa;Password=1234")]
+        public string Proyecto1_Globo {
+            get {
+                return ((string)(this["Proyecto1_Globo"]));
+            }
+        }
     }
 }
