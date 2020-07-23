@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class CrearUsuario : Form
+    public partial class FrmManPerfiles : Form
     {
-        public CrearUsuario()
+        public FrmManPerfiles()
         {
             InitializeComponent();
         }

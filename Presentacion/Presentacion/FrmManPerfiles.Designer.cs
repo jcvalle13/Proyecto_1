@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class CrearUsuario
+    partial class FrmManPerfiles
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManPerfiles));
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtClaveAcceso = new System.Windows.Forms.TextBox();
@@ -107,7 +107,7 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Clave de Acceso";
             // 
-            // CrearUsuario
+            // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "CrearUsuario";
-            this.Text = "Creación de Usuarios";
+            this.Name = "FrmManPerfiles";
+            this.Text = "Mantenimiento Perfiles";
             this.ResumeLayout(false);
             this.PerformLayout();
 
