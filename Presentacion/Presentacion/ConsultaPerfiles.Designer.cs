@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class ConsultaUsuarios
+    partial class ConsultaPerfiles
     {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Codigo a buscar:";
             // 
-            // ConsultaUsuarios
+            // ConsultaPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,9 +77,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.dgvUsuarios);
-            this.Name = "ConsultaUsuarios";
+            this.Name = "ConsultaPerfiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consulta Usuarios";
+            this.Text = "Lista Perfiles";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

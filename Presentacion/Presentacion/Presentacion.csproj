@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaUsuarios.cs">
+    <Compile Include="ConsultaPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultaUsuarios.Designer.cs">
-      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    <Compile Include="ConsultaPerfiles.Designer.cs">
+      <DependentUpon>ConsultaPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmManPerfiles.cs">
       <SubType>Form</SubType>
@@ -87,8 +87,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ConsultaUsuarios.resx">
-      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultaPerfiles.resx">
+      <DependentUpon>ConsultaPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManPerfiles.resx">
       <DependentUpon>FrmManPerfiles.cs</DependentUpon>

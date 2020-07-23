@@ -90,5 +90,29 @@ namespace Negocio
 
         #endregion
 
+
+        #region Perfiles
+        public static int AgregarPerfil(Usuarios P_Perfil)
+        {
+            //CONTINUAR VALIDANDO
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.Usuario + "','" + P_Perfil.Contraseña + "','" + P_Perfil.Estado + "')";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+
+
     }
 }

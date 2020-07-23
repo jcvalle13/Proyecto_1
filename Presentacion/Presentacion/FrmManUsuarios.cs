@@ -14,8 +14,12 @@ namespace Presentacion
 {
     public partial class FrmManUsuarios : Form
     {
+
+        #region Propiedades
         public List<Usuarios> lstresultado { get; set; }
         public bool EsError { get; set; }
+        #endregion
+
         public FrmManUsuarios()
         {
             InitializeComponent();

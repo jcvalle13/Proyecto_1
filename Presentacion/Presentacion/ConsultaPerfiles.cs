@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class ConsultaUsuarios : Form
+    public partial class ConsultaPerfiles : Form
     {
-        public ConsultaUsuarios()
+        public ConsultaPerfiles()
         {
             InitializeComponent();
         }
+
     }
 }

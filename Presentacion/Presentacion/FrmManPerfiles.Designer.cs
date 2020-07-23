@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManPerfiles));
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.txtClaveAcceso = new System.Windows.Forms.TextBox();
-            this.btnCrear = new System.Windows.Forms.Button();
+            this.txtNombrePerfil = new System.Windows.Forms.TextBox();
+            this.txtcodigoperfil = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +40,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // cboPerfiles
@@ -52,38 +56,39 @@
             this.cboPerfiles.Size = new System.Drawing.Size(100, 21);
             this.cboPerfiles.TabIndex = 15;
             // 
-            // txtNombreUsuario
+            // txtNombrePerfil
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(133, 56);
-            this.txtNombreUsuario.MaxLength = 50;
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(311, 20);
-            this.txtNombreUsuario.TabIndex = 14;
+            this.txtNombrePerfil.Location = new System.Drawing.Point(133, 56);
+            this.txtNombrePerfil.MaxLength = 50;
+            this.txtNombrePerfil.Name = "txtNombrePerfil";
+            this.txtNombrePerfil.Size = new System.Drawing.Size(311, 20);
+            this.txtNombrePerfil.TabIndex = 14;
             // 
-            // txtClaveAcceso
+            // txtcodigoperfil
             // 
-            this.txtClaveAcceso.Location = new System.Drawing.Point(133, 19);
-            this.txtClaveAcceso.MaxLength = 20;
-            this.txtClaveAcceso.Name = "txtClaveAcceso";
-            this.txtClaveAcceso.PasswordChar = '*';
-            this.txtClaveAcceso.Size = new System.Drawing.Size(100, 20);
-            this.txtClaveAcceso.TabIndex = 13;
+            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 19);
+            this.txtcodigoperfil.MaxLength = 20;
+            this.txtcodigoperfil.Name = "txtcodigoperfil";
+            this.txtcodigoperfil.PasswordChar = '*';
+            this.txtcodigoperfil.Size = new System.Drawing.Size(100, 20);
+            this.txtcodigoperfil.TabIndex = 13;
             // 
-            // btnCrear
+            // btnAgregar
             // 
-            this.btnCrear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCrear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCrear.BackgroundImage")));
-            this.btnCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCrear.Location = new System.Drawing.Point(133, 131);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(79, 91);
-            this.btnCrear.TabIndex = 12;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.Location = new System.Drawing.Point(133, 131);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(79, 91);
+            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label4
             // 
@@ -99,9 +104,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 13);
+            this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Nombre de Usuario";
+            this.label3.Text = "Nombre de Perfil";
             // 
             // label2
             // 
@@ -146,15 +151,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtClaveAcceso);
+            this.groupBox1.Controls.Add(this.txtcodigoperfil);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cboPerfiles);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtNombreUsuario);
-            this.groupBox1.Controls.Add(this.btnCrear);
+            this.groupBox1.Controls.Add(this.txtNombrePerfil);
+            this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Location = new System.Drawing.Point(22, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(469, 236);
@@ -162,26 +167,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
             // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(512, 53);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.Size = new System.Drawing.Size(206, 211);
+            this.dgvUsuarios.TabIndex = 19;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(601, 27);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(117, 20);
+            this.txtBuscar.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(508, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Codigo a buscar:";
+            // 
             // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 271);
+            this.ClientSize = new System.Drawing.Size(789, 335);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmManPerfiles";
             this.Text = "Mantenimiento Perfiles";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ComboBox cboPerfiles;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
-        private System.Windows.Forms.TextBox txtClaveAcceso;
-        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.TextBox txtNombrePerfil;
+        private System.Windows.Forms.TextBox txtcodigoperfil;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -189,5 +223,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label label1;
     }
 }
