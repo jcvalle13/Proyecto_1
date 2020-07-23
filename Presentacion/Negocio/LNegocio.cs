@@ -36,7 +36,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"UPDATE Usuarioss SET contraseña = '" + P_Usuario.Contraseña + "', estado = '" + P_Usuario.Estado + "' WHERE nomusuario = '" + P_Usuario.Usuario + "'";
+                objpeticion.Peticion = @"UPDATE Usuarioss SET Contraseña = '" + P_Usuario.Contraseña + "', Estado = '" + P_Usuario.Estado + "' WHERE Usuario = '" + P_Usuario.Usuario + "'";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
