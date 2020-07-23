@@ -49,7 +49,7 @@
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(204, 23);
             this.btnMostrar.TabIndex = 1;
-            this.btnMostrar.Text = "MOSTRAR USUARIOS";
+            this.btnMostrar.Text = "Mostrar Usuarios";
             this.btnMostrar.UseVisualStyleBackColor = true;
             // 
             // txtBuscar
