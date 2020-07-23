@@ -14,7 +14,7 @@ namespace AccesoDatos
     {
         #region Atributos
         //Configuracion a base de datos Joiner Proyecto1_Globo
-        private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
+        private string strconexion = Properties.Settings.Default.Glovo;
         private SqlConnection objconexion;
         #endregion
 
@@ -59,7 +59,83 @@ namespace AccesoDatos
 
         #endregion
 
+        #region Métodos públicos
 
+        public int Ejecutar_Peticiones(SQLParametros P_Peticion)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = P_Peticion.Peticion;
+
+                this.ABRIRCONEXION();
+
+                return cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+        }
+
+        public List<Usuarios> Consultar_Usuarios(SQLParametros P_Peticion)
+        {
+
+            List<Usuarios> lstresultados = new List<Usuarios>();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = P_Peticion.Peticion;
+
+
+                SqlDataAdapter objconsulta = new SqlDataAdapter(cmd);
+
+
+                DataTable dt = new DataTable();
+                objconsulta.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        Usuarios u = new Usuarios();
+
+
+                        u.Usuario = fila.ItemArray[0].ToString();
+                        u.Contraseña = fila.ItemArray[1].ToString();
+                        u.Estado = Convert.ToBoolean(fila.ItemArray[2].ToString());
+
+                        lstresultados.Add(u);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
+
+        #endregion
 
     }
 }

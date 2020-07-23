@@ -26,10 +26,10 @@ namespace AccesoDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JOY;User ID=sa;Password=1234")]
-        public string Proyecto1_Globo {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=STEPH\\STEPHLP;Initial Catalog=Glovo;User ID=usr_Acceso;Password=2631")]
+        public string Glovo {
             get {
-                return ((string)(this["Proyecto1_Globo"]));
+                return ((string)(this["Glovo"]));
             }
         }
     }

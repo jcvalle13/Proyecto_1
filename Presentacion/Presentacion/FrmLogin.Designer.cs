@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.lblBloqueo = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnIngreso = new System.Windows.Forms.Button();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -50,16 +49,6 @@
             this.lblBloqueo.Size = new System.Drawing.Size(0, 16);
             this.lblBloqueo.TabIndex = 13;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 171);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(71, 13);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Crear Usuario";
-            // 
             // btnIngreso
             // 
             this.btnIngreso.Location = new System.Drawing.Point(172, 92);
@@ -68,6 +57,7 @@
             this.btnIngreso.TabIndex = 11;
             this.btnIngreso.Text = "Ingresar";
             this.btnIngreso.UseVisualStyleBackColor = true;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // txtClave
             // 
@@ -119,7 +109,6 @@
             this.ClientSize = new System.Drawing.Size(318, 193);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblBloqueo);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnIngreso);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
@@ -136,7 +125,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblBloqueo;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.TextBox txtUsuario;
