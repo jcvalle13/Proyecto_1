@@ -67,7 +67,7 @@
             // 
             this.cerrarSistemaToolStripMenuItem.Name = "cerrarSistemaToolStripMenuItem";
             this.cerrarSistemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSistemaToolStripMenuItem.Text = "Cerrar Sistema";
+            this.cerrarSistemaToolStripMenuItem.Text = "Log off";
             // 
             // mantenimientosToolStripMenuItem
             // 
@@ -130,7 +130,7 @@
             // 
             this.listarMToolStripMenuItem.Name = "listarMToolStripMenuItem";
             this.listarMToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.listarMToolStripMenuItem.Text = "Listar Monto Persibido";
+            this.listarMToolStripMenuItem.Text = "Listar Monto Percibido";
             // 
             // frmMenu
             // 

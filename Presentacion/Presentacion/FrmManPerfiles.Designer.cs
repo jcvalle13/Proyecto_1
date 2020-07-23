@@ -76,7 +76,7 @@
             this.btnCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCrear.Location = new System.Drawing.Point(154, 131);
+            this.btnCrear.Location = new System.Drawing.Point(133, 131);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(79, 91);
             this.btnCrear.TabIndex = 12;
@@ -108,9 +108,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Código Acceso";
+            this.label2.Text = "Código Perfil";
             // 
             // btnModificar
             // 
@@ -119,7 +119,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.Location = new System.Drawing.Point(262, 131);
+            this.btnModificar.Location = new System.Drawing.Point(235, 131);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(80, 91);
             this.btnModificar.TabIndex = 16;
@@ -135,7 +135,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(368, 131);
+            this.button2.Location = new System.Drawing.Point(333, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 91);
             this.button2.TabIndex = 17;
@@ -160,13 +160,13 @@
             this.groupBox1.Size = new System.Drawing.Size(469, 236);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Usuarios";
+            this.groupBox1.Text = "Información";
             // 
             // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 281);
+            this.ClientSize = new System.Drawing.Size(504, 271);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmManPerfiles";
             this.Text = "Mantenimiento Perfiles";
