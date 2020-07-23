@@ -92,7 +92,7 @@ namespace Negocio
 
 
         #region Perfiles
-        public static int AgregarPerfil(Usuarios P_Perfil)
+        public static int AgregarPerfil(Perfiles P_Perfil)
         {
             //CONTINUAR VALIDANDO
             try

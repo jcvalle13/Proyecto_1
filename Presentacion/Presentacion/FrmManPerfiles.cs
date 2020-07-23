@@ -48,7 +48,7 @@ namespace Presentacion
                 if (txtBuscar.Text.Length == 0 || txtBuscar.Text.Equals("0"))
                     lstresultado = LNegocio.ConsultarPerfiles(new Perfiles { cod_perfil = 0 });
                 else
-                    lstresultado = Negocio.ConsultarPerfiles(new Perfiles { cod_perfil = Convert.ToInt32(txtBuscar.Text) });
+                    lstresultado = LNegocio.ConsultarPerfiles(new Perfiles { cod_perfil = Convert.ToInt32(txtBuscar.Text) });
 
                 dgvPerfiles.DataSource = null;
                 dgvPerfiles.Refresh();

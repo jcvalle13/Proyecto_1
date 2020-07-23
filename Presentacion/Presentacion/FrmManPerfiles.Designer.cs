@@ -40,11 +40,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.dgvPerfiles = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.SuspendLayout();
             // 
             // cboPerfiles
@@ -167,13 +167,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
             // 
-            // dgvUsuarios
+            // dgvPerfiles
             // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(512, 53);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(206, 211);
-            this.dgvUsuarios.TabIndex = 19;
+            this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfiles.Location = new System.Drawing.Point(512, 53);
+            this.dgvPerfiles.Name = "dgvPerfiles";
+            this.dgvPerfiles.Size = new System.Drawing.Size(206, 211);
+            this.dgvPerfiles.TabIndex = 19;
             // 
             // txtBuscar
             // 
@@ -198,13 +198,13 @@
             this.ClientSize = new System.Drawing.Size(789, 335);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvUsuarios);
+            this.Controls.Add(this.dgvPerfiles);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmManPerfiles";
             this.Text = "Mantenimiento Perfiles";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.DataGridView dgvPerfiles;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
     }
