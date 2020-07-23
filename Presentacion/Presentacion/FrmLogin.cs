@@ -45,7 +45,7 @@ namespace Presentacion
 
 
 
-                if (Negocio.LNegocio.VerificarUsuario(objusuario))
+                if (LNegocio.VerificarUsuario(objusuario))
 
                 {
                     MessageBox.Show("USUARIO CORRECTO", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
