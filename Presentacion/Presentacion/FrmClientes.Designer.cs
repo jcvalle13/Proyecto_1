@@ -32,16 +32,16 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.mcDonaldsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kFCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tacoBellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
             this.licoreraElEmbellecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cafeteriaAmigosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aMPMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.floristeríaDulcitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detallitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sublimaciónCreacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +87,27 @@
             this.toolStripSplitButton2.Size = new System.Drawing.Size(142, 132);
             this.toolStripSplitButton2.Text = "toolStripSplitButton2";
             // 
+            // mcDonaldsToolStripMenuItem
+            // 
+            this.mcDonaldsToolStripMenuItem.Name = "mcDonaldsToolStripMenuItem";
+            this.mcDonaldsToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.mcDonaldsToolStripMenuItem.Text = "McDonald\'s";
+            this.mcDonaldsToolStripMenuItem.Click += new System.EventHandler(this.mcDonaldsToolStripMenuItem_Click);
+            // 
+            // kFCToolStripMenuItem
+            // 
+            this.kFCToolStripMenuItem.Name = "kFCToolStripMenuItem";
+            this.kFCToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.kFCToolStripMenuItem.Text = "KFC";
+            this.kFCToolStripMenuItem.Click += new System.EventHandler(this.kFCToolStripMenuItem_Click);
+            // 
+            // tacoBellToolStripMenuItem
+            // 
+            this.tacoBellToolStripMenuItem.Name = "tacoBellToolStripMenuItem";
+            this.tacoBellToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.tacoBellToolStripMenuItem.Text = "TacoBell";
+            this.tacoBellToolStripMenuItem.Click += new System.EventHandler(this.tacoBellToolStripMenuItem_Click);
+            // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,48 +129,6 @@
             this.toolStripSplitButton3.Size = new System.Drawing.Size(142, 132);
             this.toolStripSplitButton3.Text = "toolStripSplitButton3";
             // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(142, 23);
-            this.toolStripLabel3.Text = "Regalos";
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.floristeríaDulcitaToolStripMenuItem,
-            this.detallitosToolStripMenuItem,
-            this.sublimaciónCreacionesToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(142, 132);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
-            // 
-            // mcDonaldsToolStripMenuItem
-            // 
-            this.mcDonaldsToolStripMenuItem.Name = "mcDonaldsToolStripMenuItem";
-            this.mcDonaldsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mcDonaldsToolStripMenuItem.Text = "McDonald\'s";
-            this.mcDonaldsToolStripMenuItem.Click += new System.EventHandler(this.mcDonaldsToolStripMenuItem_Click);
-            // 
-            // kFCToolStripMenuItem
-            // 
-            this.kFCToolStripMenuItem.Name = "kFCToolStripMenuItem";
-            this.kFCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kFCToolStripMenuItem.Text = "KFC";
-            this.kFCToolStripMenuItem.Click += new System.EventHandler(this.kFCToolStripMenuItem_Click);
-            // 
-            // tacoBellToolStripMenuItem
-            // 
-            this.tacoBellToolStripMenuItem.Name = "tacoBellToolStripMenuItem";
-            this.tacoBellToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tacoBellToolStripMenuItem.Text = "TacoBell";
-            this.tacoBellToolStripMenuItem.Click += new System.EventHandler(this.tacoBellToolStripMenuItem_Click);
-            // 
             // licoreraElEmbellecedorToolStripMenuItem
             // 
             this.licoreraElEmbellecedorToolStripMenuItem.Name = "licoreraElEmbellecedorToolStripMenuItem";
@@ -170,6 +149,27 @@
             this.aMPMToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.aMPMToolStripMenuItem.Text = "AM/PM";
             this.aMPMToolStripMenuItem.Click += new System.EventHandler(this.aMPMToolStripMenuItem_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(142, 23);
+            this.toolStripLabel3.Text = "Regalos";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.floristeríaDulcitaToolStripMenuItem,
+            this.detallitosToolStripMenuItem,
+            this.sublimaciónCreacionesToolStripMenuItem});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(142, 132);
+            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
             // 
             // floristeríaDulcitaToolStripMenuItem
             // 
@@ -198,9 +198,9 @@
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(479, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 45);
+            this.label1.Size = new System.Drawing.Size(290, 45);
             this.label1.TabIndex = 1;
-            this.label1.Text = "¿Qué se le antoja?";
+            this.label1.Text = "¿Qué se le anntoja?";
             // 
             // FrmClientes
             // 
