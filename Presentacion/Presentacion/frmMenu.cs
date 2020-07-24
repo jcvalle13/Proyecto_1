@@ -50,5 +50,12 @@ namespace Presentacion
         {
             Application.Exit();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManUsuarios frm = new FrmManUsuarios();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
