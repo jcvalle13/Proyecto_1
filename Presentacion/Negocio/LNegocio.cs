@@ -88,6 +88,22 @@ namespace Negocio
             }
         }
 
+        public static List<Usuarios> Consultar_Permisos_Usuarios(Usuarios P_usuario)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Permisos_Usuarios(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         #endregion
 
 
@@ -115,7 +131,7 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
                 
-                objpeticion.Peticion = @"SELECT codigoperfil, descripcion, estado FROM Perfil";
+                objpeticion.Peticion = @"SELECT codigoperfil FROM Perfiles";
                 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Perfiles(objpeticion);
@@ -138,6 +154,9 @@ namespace Negocio
                 throw ex;
             }
         }
+
+       
+        
 
         #endregion
 

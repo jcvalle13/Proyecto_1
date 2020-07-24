@@ -15,9 +15,12 @@ namespace AccesoDatos
         #region Atributos
         //Configuracion string de conexion Joiner Proyecto1_Globo
         private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
-        
+
         //Configuracion string de conexion a base de datos Steph Glovo
         //private string strconexion = Properties.Settings.Default.Glovo;
+
+        //Configuracion string de conexion Rafael "BASEDEDATOS"
+
         private SqlConnection objconexion;
         #endregion
 
@@ -121,6 +124,62 @@ namespace AccesoDatos
                         u.Usuario = fila.ItemArray[0].ToString();
                         u.Contraseña = fila.ItemArray[1].ToString();
                         u.Estado = Convert.ToBoolean(fila.ItemArray[2].ToString());
+
+                        lstresultados.Add(u);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
+
+        public List<Usuarios> Consultar_Permisos_Usuarios(SQLParametros P_Peticion)
+        {
+            //Variable temporal que conservara respuesta de BD
+            List<Usuarios> lstresultados = new List<Usuarios>();
+
+            try
+            {
+                //Este objeto se encarga de las configuraciones necesarias para conectarse a BD
+                //Ademas de contener un metodo para la ejecucion de esa petición contra la BD
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+                //Objeto que es el que se encarga de ejecutar la consulta y recibir el resultado
+                SqlDataAdapter objconsulta = new SqlDataAdapter(cmd);
+
+                //Variable temporal para captura respuesta
+                DataTable dt = new DataTable();
+                objconsulta.Fill(dt); //Aqui se envia la peticion a ejecutar en BD y recibe la respuesta,
+                                      //esta respuesta se carga en el DT
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    //Es un ciclo que toma uno a uno los elementos de la coleccion que se este recorriendo
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        Usuarios u = new Usuarios();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        u.Perfiles = new Perfiles
+                        {
+                            cod_perfil = Convert.ToInt32(fila.ItemArray[0].ToString()),
+                            nombreperfil = fila.ItemArray[1].ToString()
+                        };
 
                         lstresultados.Add(u);
                     }

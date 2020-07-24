@@ -17,30 +17,30 @@ namespace Presentacion
 
         public string Usuario { get; set; }
 
-        /*public void CargarOpcionesUsuario()
+        public void CargarOpcionesUsuario()
         {
           
             Usuarios u = new Usuarios();
-            u.NombreUsuario = Usuario;
+            u.Usuario = Usuario;
 
             List<Usuarios> lstusuarios = LNegocio.Consultar_Permisos_Usuarios(u);
             //botones
-            mantenimientoToolStripMenuItem.Visible = false;
+            mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
-            procesosToolStripMenuItem.Visible = false;
+            pedidosToolStripMenuItem.Visible = false;
 
             foreach (Usuarios item in lstusuarios)
             {
                 switch (item.Perfiles.cod_perfil)
                 {
                     case 1: { consultasToolStripMenuItem.Visible = true; } break;
-                    case 2: { mantenimientoToolStripMenuItem.Visible = true; } break;
-                    case 3: { procesosToolStripMenuItem.Visible = true; } break;
+                    case 2: { mantenimientosToolStripMenuItem.Visible = true; } break;
+                    case 3: { pedidosToolStripMenuItem.Visible = true; } break;
                     case 4: { } break;
                     case 5: { } break;
                 }
             }
-        }*/
+        }
         public frmMenu()
         {
             InitializeComponent();
@@ -49,6 +49,27 @@ namespace Presentacion
         private void LogoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManPerfiles frm = new FrmManPerfiles();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmManUsuarios frm = new FrmManUsuarios();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void estadoPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaPedidos frm = new FrmConsultaPedidos();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

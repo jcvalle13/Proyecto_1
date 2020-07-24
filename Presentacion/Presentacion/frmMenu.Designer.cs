@@ -40,6 +40,8 @@
             this.listadoDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCantidadDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
             this.mantenimientosToolStripMenuItem,
-            this.consultasToolStripMenuItem});
+            this.consultasToolStripMenuItem,
+            this.pedidosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -66,7 +69,7 @@
             // LogoffToolStripMenuItem
             // 
             this.LogoffToolStripMenuItem.Name = "LogoffToolStripMenuItem";
-            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.LogoffToolStripMenuItem.Text = "Log off";
             this.LogoffToolStripMenuItem.Click += new System.EventHandler(this.LogoffToolStripMenuItem_Click);
             // 
@@ -82,14 +85,16 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
+            this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -133,6 +138,21 @@
             this.listarMToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.listarMToolStripMenuItem.Text = "Listar Monto Percibido";
             // 
+            // pedidosToolStripMenuItem
+            // 
+            this.pedidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.estadoPedidosToolStripMenuItem});
+            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pedidosToolStripMenuItem.Text = "Pedidos";
+            // 
+            // estadoPedidosToolStripMenuItem
+            // 
+            this.estadoPedidosToolStripMenuItem.Name = "estadoPedidosToolStripMenuItem";
+            this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estadoPedidosToolStripMenuItem.Text = "Estado pedidos";
+            this.estadoPedidosToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidosToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,5 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem listadoDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoCantidadDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadoPedidosToolStripMenuItem;
     }
 }

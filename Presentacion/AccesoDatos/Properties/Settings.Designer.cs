@@ -42,5 +42,17 @@ namespace AccesoDatos.Properties {
                 return ((string)(this["Proyecto1_Globo"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string XX {
+            get {
+                return ((string)(this["XX"]));
+            }
+            set {
+                this["XX"] = value;
+            }
+        }
     }
 }
