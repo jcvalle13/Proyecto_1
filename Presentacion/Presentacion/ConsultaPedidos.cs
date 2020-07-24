@@ -10,12 +10,18 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class ConsultaPerfiles : Form
+    public partial class FrmConsultaPedidos : Form
     {
-        public ConsultaPerfiles()
+        public FrmConsultaPedidos()
         {
             InitializeComponent();
         }
 
+        private void btnmenu_Click(object sender, EventArgs e)
+        {
+            frmMenu frm = new frmMenu();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

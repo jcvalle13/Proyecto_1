@@ -80,7 +80,7 @@
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(133, 131);
+            this.btnAgregar.Location = new System.Drawing.Point(133, 120);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(79, 91);
             this.btnAgregar.TabIndex = 12;
@@ -93,11 +93,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 102);
+            this.label4.Location = new System.Drawing.Point(6, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Tipo Perfil";
+            this.label4.Text = "Estado";
             // 
             // label3
             // 
@@ -124,7 +124,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.Location = new System.Drawing.Point(235, 131);
+            this.btnModificar.Location = new System.Drawing.Point(235, 120);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(80, 91);
             this.btnModificar.TabIndex = 16;
@@ -140,7 +140,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(333, 131);
+            this.button2.Location = new System.Drawing.Point(335, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 91);
             this.button2.TabIndex = 17;
@@ -160,7 +160,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtNombrePerfil);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Location = new System.Drawing.Point(22, 27);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(469, 236);
             this.groupBox1.TabIndex = 18;
@@ -170,22 +170,24 @@
             // dgvPerfiles
             // 
             this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerfiles.Location = new System.Drawing.Point(512, 53);
+            this.dgvPerfiles.Location = new System.Drawing.Point(487, 38);
             this.dgvPerfiles.Name = "dgvPerfiles";
-            this.dgvPerfiles.Size = new System.Drawing.Size(206, 211);
+            this.dgvPerfiles.Size = new System.Drawing.Size(206, 210);
             this.dgvPerfiles.TabIndex = 19;
+            this.dgvPerfiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfiles_CellContentClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(601, 27);
+            this.txtBuscar.Location = new System.Drawing.Point(576, 9);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(117, 20);
             this.txtBuscar.TabIndex = 21;
+           
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(508, 27);
+            this.label1.Location = new System.Drawing.Point(487, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 20;
@@ -195,12 +197,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 335);
+            this.ClientSize = new System.Drawing.Size(712, 260);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPerfiles);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmManPerfiles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Perfiles";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

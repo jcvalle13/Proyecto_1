@@ -26,6 +26,8 @@ namespace Presentacion
         {
             lstresultado = new List<Perfiles>();
             InitializeComponent();
+            CargarLista();
+            CargarCombos();
         }
 
         #region Metodos 
@@ -58,7 +60,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -71,16 +73,16 @@ namespace Presentacion
                 DataTable dt = new DataTable();
 
                 //Creando las columnas a esa tabla
-                dt.Columns.Add("Codigo");
-                dt.Columns.Add("Descripcion");
+                dt.Columns.Add("Codigo Perfil");
+                dt.Columns.Add("Nombre Perfil");
 
                 //Insertando información a esa tabla
                 dt.Rows.Add("true", "Activo");
                 dt.Rows.Add("false", "Inactivo");
 
                 cboPerfiles.DataSource = dt;
-                cboPerfiles.DisplayMember = "Descripcion";
-                cboPerfiles.ValueMember = "Codigo";
+                cboPerfiles.DisplayMember = "Nombre Perfil";
+                cboPerfiles.ValueMember = "Codigo Perfil";
                 cboPerfiles.Refresh();
                 cboPerfiles.SelectedIndex = 0;
             }
@@ -151,9 +153,30 @@ namespace Presentacion
             }
         }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CargarLista();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtcodigoperfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtNombrePerfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
         #endregion
 
         #endregion
+
 
 
     }
