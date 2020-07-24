@@ -36,10 +36,23 @@ namespace AccesoDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-JOY;Initial Catalog=Proyecto1_Globo;User ID=sa;Password=1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MANRIQUE\\SQLEXPRESS;Initial Catalog=Proyecto1_Globo;User ID=sa;Passwo" +
+            "rd=1234")]
         public string Proyecto1_Globo {
             get {
                 return ((string)(this["Proyecto1_Globo"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string XX {
+            get {
+                return ((string)(this["XX"]));
+            }
+            set {
+                this["XX"] = value;
             }
         }
     }
