@@ -138,6 +138,56 @@ namespace AccesoDatos
             return lstresultados;
         }
 
+        public List<Perfiles> Consultar_Perfiles(SQLParametros P_Peticion)
+        {
+            List<Perfiles> lstresultados = new List<Perfiles>();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+
+                SqlDataAdapter objconsultaperfil = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                objconsultaperfil.Fill(dt);
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        Perfiles p = new Perfiles();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        p.cod_perfil = Convert.ToInt32(fila.ItemArray[0].ToString());
+                        p.nombreperfil = fila.ItemArray[1].ToString();
+                        p.estado = Convert.ToBoolean(fila.ItemArray[2].ToString());
+
+                        lstresultados.Add(p);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
+
+
         #endregion
 
     }

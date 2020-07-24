@@ -99,10 +99,39 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.Usuario + "','" + P_Perfil.Contraseña + "','" + P_Perfil.Estado + "')";
+                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.cod_perfil + "','" + P_Perfil.nombreperfil + "','" + P_Perfil.estado + "')";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                
+                objpeticion.Peticion = @"SELECT codigoperfil, descripcion, estado FROM Perfil";
+                
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Perfiles(objpeticion);
+
+
+                //Crear los parametros
+                /* SqlParameter parametroCodigo = new SqlParameter();
+                 parametroCodigo.ParameterName = "@codigo";
+                 parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+                 parametroCodigo.Value = P_Perfil.cod_perfil;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroCodigo);
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Perfiles(objpeticion);*/
             }
             catch (Exception ex)
             {

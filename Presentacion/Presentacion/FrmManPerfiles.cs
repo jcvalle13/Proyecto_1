@@ -130,14 +130,14 @@ namespace Presentacion
                         MessageBox.Show("El código digitado ya existe en base de datos, por favor cambiarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    Perfiles p = new Perfiles();
+                    //Perfiles p = new Perfiles();
 
                     Perfiles perfil_user = new Perfiles();
                     perfil_user.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
-                    perfil_user.descripcion = txtdescripcion.Text.Trim();
+                    perfil_user.nombreperfil = txtNombrePerfil.Text.Trim();
                     perfil_user.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
-                    LNegocio.AgregarPerfiles(perfil_user);
+                    LNegocio.AgregarPerfil(perfil_user);
                     MessageBox.Show("Perfil agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limpiar();
