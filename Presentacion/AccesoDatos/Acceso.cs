@@ -12,6 +12,8 @@ namespace AccesoDatos
 {
     public class Acceso
     {
+        //Configuracion string de conexion Joiner Proyecto1_Globo
+
         #region Atributos
         //Configuracion string de conexion Joiner Proyecto1_Globo
         private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
