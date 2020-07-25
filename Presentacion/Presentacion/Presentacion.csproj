@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaPerfiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaPerfiles.Designer.cs">
-      <DependentUpon>ConsultaPerfiles.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +93,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ConsultaPerfiles.resx">
-      <DependentUpon>ConsultaPerfiles.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
