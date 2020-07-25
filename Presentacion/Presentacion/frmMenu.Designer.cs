@@ -151,8 +151,7 @@
             this.estadoPedidosToolStripMenuItem.Name = "estadoPedidosToolStripMenuItem";
             this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.estadoPedidosToolStripMenuItem.Text = "Estado pedidos";
-            this.estadoPedidosToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidosToolStripMenuItem_Click);
-            // 
+             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
