@@ -38,11 +38,11 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvPerfiles = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.SuspendLayout();
@@ -158,11 +158,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
             // 
+            // txtcodigoperfil
+            // 
+            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 23);
+            this.txtcodigoperfil.Name = "txtcodigoperfil";
+            this.txtcodigoperfil.Size = new System.Drawing.Size(121, 20);
+            this.txtcodigoperfil.TabIndex = 18;
+            // 
             // dgvPerfiles
             // 
+            this.dgvPerfiles.AllowUserToAddRows = false;
+            this.dgvPerfiles.AllowUserToDeleteRows = false;
+            this.dgvPerfiles.AllowUserToOrderColumns = true;
             this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerfiles.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvPerfiles.Location = new System.Drawing.Point(487, 38);
             this.dgvPerfiles.Name = "dgvPerfiles";
+            this.dgvPerfiles.ReadOnly = true;
+            this.dgvPerfiles.RowHeadersVisible = false;
+            this.dgvPerfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPerfiles.Size = new System.Drawing.Size(206, 210);
             this.dgvPerfiles.TabIndex = 19;
             this.dgvPerfiles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfiles_CellContentClick);
@@ -173,6 +187,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(117, 20);
             this.txtBuscar.TabIndex = 21;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
@@ -182,13 +197,6 @@
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Codigo a buscar:";
-            // 
-            // txtcodigoperfil
-            // 
-            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 23);
-            this.txtcodigoperfil.Name = "txtcodigoperfil";
-            this.txtcodigoperfil.Size = new System.Drawing.Size(121, 20);
-            this.txtcodigoperfil.TabIndex = 18;
             // 
             // FrmManPerfiles
             // 
