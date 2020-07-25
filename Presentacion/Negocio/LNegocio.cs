@@ -115,7 +115,7 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.cod_perfil + "','" + P_Perfil.nombreperfil + "','" + P_Perfil.estado + "')";
+                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.cod_perfil + "','" + P_Perfil.descripcion + "','" + P_Perfil.estado + "')";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -130,8 +130,8 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                
-                objpeticion.Peticion = @"SELECT codigoperfil FROM Perfiles";
+                //chequear
+                objpeticion.Peticion = @"SELECT codigoperfil FROM PerfilxUsuarios";
                 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Perfiles(objpeticion);
