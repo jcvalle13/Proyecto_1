@@ -110,44 +110,61 @@ namespace Negocio
         #region Perfiles
         public static int AgregarPerfil(Perfiles P_Perfil)
         {
-            //CONTINUAR VALIDANDO
-            try
-            {
-                SQLParametros objpeticion = new SQLParametros();
+            SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.cod_perfil + "','" + P_Perfil.descripcion + "','" + P_Perfil.estado + "')";
+            //Ajustar peticion para utilización con parametros
+            objpeticion.Peticion = @"EXEC PA_AgregarPerfil @codigoperfil, @descripcion, @estado";
 
-                Acceso objacceso = new Acceso();
-                return objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            //Crear los parametros
+            SqlParameter parametroCodigo = new SqlParameter();
+            parametroCodigo.ParameterName = "@codigoperfil";
+            parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+            parametroCodigo.Value = P_Perfil.cod_perfil;
+
+            SqlParameter parametroDescripcion = new SqlParameter();
+            parametroDescripcion.ParameterName = "@descripcion";
+            parametroDescripcion.Size = 50;
+            parametroDescripcion.SqlDbType = System.Data.SqlDbType.VarChar;
+            parametroDescripcion.Value = P_Perfil.descripcion;
+
+            SqlParameter parametroEstado = new SqlParameter();
+            parametroEstado.ParameterName = "@estado";
+            parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
+            parametroEstado.Value = P_Perfil.estado;
+
+            //Agrega a la lista de parametros los parametros creados
+            objpeticion.LstParametros.Add(parametroCodigo);
+            objpeticion.LstParametros.Add(parametroDescripcion);
+            objpeticion.LstParametros.Add(parametroEstado);
+
+            Acceso objacceso = new Acceso();
+            return objacceso.Ejecutar_Peticiones(objpeticion);
         }
         public static List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil)
         {
             try
             {
-                SQLParametros objpeticion = new SQLParametros();
-                //chequear
-                objpeticion.Peticion = @"SELECT codigoperfil FROM PerfilxUsuarios";
-                
-                Acceso objacceso = new Acceso();
-                return objacceso.Consultar_Perfiles(objpeticion);
+                try
+                {
+                    SQLParametros objpeticion = new SQLParametros();
+                    objpeticion.Peticion = @"EXEC PA_ConsultarPerfiles @codigoperfil";
 
+                    //Crear los parametros
+                    SqlParameter parametroCodigo = new SqlParameter();
+                    parametroCodigo.ParameterName = "@codigoperfil";
+                    parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+                    parametroCodigo.Value = P_Perfil.cod_perfil;
 
-                //Crear los parametros
-                /* SqlParameter parametroCodigo = new SqlParameter();
-                 parametroCodigo.ParameterName = "@codigo";
-                 parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
-                 parametroCodigo.Value = P_Perfil.cod_perfil;
+                    //Agrega a la lista de parametros los parametros creados
+                    objpeticion.LstParametros.Add(parametroCodigo);
 
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroCodigo);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Consultar_Perfiles(objpeticion);*/
+                    Acceso objacceso = new Acceso();
+                    return objacceso.Consultar_Perfiles(objpeticion);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
             catch (Exception ex)
             {
