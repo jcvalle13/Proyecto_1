@@ -39,8 +39,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnpedir = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,17 +64,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 226);
+            this.label2.Location = new System.Drawing.Point(14, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 27);
+            this.label2.Size = new System.Drawing.Size(97, 27);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Distrito:";
+            this.label2.Text = "Dirección:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 192);
+            this.label3.Location = new System.Drawing.Point(14, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 27);
             this.label3.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(52, 159);
+            this.label4.Location = new System.Drawing.Point(14, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 27);
             this.label4.TabIndex = 4;
@@ -94,11 +94,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 129);
+            this.label5.Location = new System.Drawing.Point(14, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 27);
+            this.label5.Size = new System.Drawing.Size(130, 27);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Cédula:";
+            this.label5.Text = "Identificación:";
             // 
             // textBox2
             // 
@@ -140,38 +140,33 @@
             this.btnpedir.TabIndex = 10;
             this.btnpedir.Text = "Pedir";
             this.btnpedir.UseVisualStyleBackColor = true;
+            this.btnpedir.Click += new System.EventHandler(this.btnpedir_Click);
             // 
-            // radioButton1
+            // label7
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(105, 274);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(98, 31);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Efectivo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 270);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 27);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Modo de pago:";
             // 
-            // radioButton2
+            // comboBox1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(252, 274);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(127, 31);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Credit Card";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(168, 270);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(208, 21);
+            this.comboBox1.TabIndex = 12;
             // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 401);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnpedir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox4);
@@ -203,7 +198,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnpedir;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
