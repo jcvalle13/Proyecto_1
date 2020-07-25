@@ -175,7 +175,7 @@ namespace AccesoDatos
                         u.Perfiles = new Perfiles
                         {
                             cod_perfil = Convert.ToInt32(fila.ItemArray[0].ToString()),
-                            nombreperfil = fila.ItemArray[1].ToString()
+                            descripcion = fila.ItemArray[1].ToString()
                         };
 
                         lstresultados.Add(u);
@@ -224,7 +224,7 @@ namespace AccesoDatos
 
                         //Aqui se obtiene los valores de celda o columna por fila leida
                         p.cod_perfil = Convert.ToInt32(fila.ItemArray[0].ToString());
-                        p.nombreperfil = fila.ItemArray[1].ToString();
+                        p.descripcion = fila.ItemArray[1].ToString();
                         p.estado = Convert.ToBoolean(fila.ItemArray[2].ToString());
 
                         lstresultados.Add(p);

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManPerfiles));
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
-            this.txtNombrePerfil = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,13 +56,13 @@
             this.cboPerfiles.Size = new System.Drawing.Size(100, 21);
             this.cboPerfiles.TabIndex = 15;
             // 
-            // txtNombrePerfil
+            // txtDescripcion
             // 
-            this.txtNombrePerfil.Location = new System.Drawing.Point(133, 56);
-            this.txtNombrePerfil.MaxLength = 50;
-            this.txtNombrePerfil.Name = "txtNombrePerfil";
-            this.txtNombrePerfil.Size = new System.Drawing.Size(311, 20);
-            this.txtNombrePerfil.TabIndex = 14;
+            this.txtDescripcion.Location = new System.Drawing.Point(133, 56);
+            this.txtDescripcion.MaxLength = 50;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(311, 20);
+            this.txtDescripcion.TabIndex = 14;
             // 
             // txtcodigoperfil
             // 
@@ -104,9 +104,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.Size = new System.Drawing.Size(104, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Nombre de Perfil";
+            this.label3.Text = "Descripción de Perfil";
             // 
             // label2
             // 
@@ -158,7 +158,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.cboPerfiles);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtNombrePerfil);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -182,7 +182,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(117, 20);
             this.txtBuscar.TabIndex = 21;
-           
             // 
             // label1
             // 
@@ -218,7 +217,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cboPerfiles;
-        private System.Windows.Forms.TextBox txtNombrePerfil;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtcodigoperfil;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label4;

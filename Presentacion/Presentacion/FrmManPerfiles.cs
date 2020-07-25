@@ -37,7 +37,7 @@ namespace Presentacion
         private void limpiar()
         {
             txtcodigoperfil.Text = string.Empty;
-            txtNombrePerfil.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
             cboPerfiles.SelectedIndex = 0;
         }
 
@@ -74,14 +74,14 @@ namespace Presentacion
 
                 //Creando las columnas a esa tabla
                 dt.Columns.Add("Codigo Perfil");
-                dt.Columns.Add("Nombre Perfil");
+                dt.Columns.Add("Descripcion");
 
                 //Insertando información a esa tabla
                 dt.Rows.Add("true", "Activo");
                 dt.Rows.Add("false", "Inactivo");
 
                 cboPerfiles.DataSource = dt;
-                cboPerfiles.DisplayMember = "Nombre Perfil";
+                cboPerfiles.DisplayMember = "Descripcion";
                 cboPerfiles.ValueMember = "Codigo Perfil";
                 cboPerfiles.Refresh();
                 cboPerfiles.SelectedIndex = 0;
@@ -136,7 +136,7 @@ namespace Presentacion
 
                     Perfiles perfil_user = new Perfiles();
                     perfil_user.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
-                    perfil_user.nombreperfil = txtNombrePerfil.Text.Trim();
+                    perfil_user.descripcion = txtDescripcion.Text.Trim();
                     perfil_user.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
                     LNegocio.AgregarPerfil(perfil_user);
@@ -169,8 +169,8 @@ namespace Presentacion
         private void dgvPerfiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtcodigoperfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtNombrePerfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtDescripcion.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString().Equals("Activo") ? true : false;
         }
 
         #endregion
