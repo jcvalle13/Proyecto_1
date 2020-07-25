@@ -65,11 +65,6 @@ namespace Presentacion
             frm.Show();
         }
 
-        private void estadoPedidosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsultaPedidos frm = new FrmConsultaPedidos();
-            frm.MdiParent = this;
-            frm.Show();
-        }
+    
     }
 }
