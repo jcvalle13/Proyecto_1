@@ -112,6 +112,7 @@ namespace Negocio
         {
             SQLParametros objpeticion = new SQLParametros();
 
+
             //Ajustar peticion para utilización con parametros
             objpeticion.Peticion = @"EXEC PA_AgregarPerfil @codigoperfil, @descripcion, @estado";
 
