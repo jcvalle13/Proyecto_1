@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManPerfiles));
             this.cboPerfiles = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.dgvPerfiles = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.SuspendLayout();
@@ -63,15 +63,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(311, 20);
             this.txtDescripcion.TabIndex = 14;
-            // 
-            // txtcodigoperfil
-            // 
-            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 19);
-            this.txtcodigoperfil.MaxLength = 20;
-            this.txtcodigoperfil.Name = "txtcodigoperfil";
-            this.txtcodigoperfil.PasswordChar = '*';
-            this.txtcodigoperfil.Size = new System.Drawing.Size(100, 20);
-            this.txtcodigoperfil.TabIndex = 13;
             // 
             // btnAgregar
             // 
@@ -192,6 +183,13 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Codigo a buscar:";
             // 
+            // txtcodigoperfil
+            // 
+            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 23);
+            this.txtcodigoperfil.Name = "txtcodigoperfil";
+            this.txtcodigoperfil.Size = new System.Drawing.Size(121, 20);
+            this.txtcodigoperfil.TabIndex = 18;
+            // 
             // FrmManPerfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +216,6 @@
 
         private System.Windows.Forms.ComboBox cboPerfiles;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.TextBox txtcodigoperfil;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -230,5 +227,6 @@
         private System.Windows.Forms.DataGridView dgvPerfiles;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcodigoperfil;
     }
 }

@@ -170,7 +170,7 @@ namespace Presentacion
         {
             txtcodigoperfil.Text = dgvPerfiles.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtDescripcion.Text = dgvPerfiles.Rows[e.RowIndex].Cells[1].Value.ToString();
-            cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString().Equals("Activo") ? true : false;
+            cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();//.Equals("Activo") ? true : false;
         }
 
         #endregion

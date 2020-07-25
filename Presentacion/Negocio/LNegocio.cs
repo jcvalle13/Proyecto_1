@@ -113,11 +113,11 @@ namespace Negocio
             SQLParametros objpeticion = new SQLParametros();
 
             //Ajustar peticion para utilización con parametros
-            objpeticion.Peticion = @"EXEC PA_AgregarPerfil @codigoperfil, @descripcion, @estado";
+            objpeticion.Peticion = @"EXEC PA_AgregarPerfil @codperfil, @descripcion, @estado";
 
             //Crear los parametros
             SqlParameter parametroCodigo = new SqlParameter();
-            parametroCodigo.ParameterName = "@codigoperfil";
+            parametroCodigo.ParameterName = "@codperfil";
             parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
             parametroCodigo.Value = P_Perfil.cod_perfil;
 
@@ -147,11 +147,11 @@ namespace Negocio
                 try
                 {
                     SQLParametros objpeticion = new SQLParametros();
-                    objpeticion.Peticion = @"EXEC PA_ConsultarPerfiles @codigoperfil";
+                    objpeticion.Peticion = @"EXEC PA_ConsultarPerfiles @codperfil";
 
                     //Crear los parametros
                     SqlParameter parametroCodigo = new SqlParameter();
-                    parametroCodigo.ParameterName = "@codigoperfil";
+                    parametroCodigo.ParameterName = "@codperfil";
                     parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
                     parametroCodigo.Value = P_Perfil.cod_perfil;
 
