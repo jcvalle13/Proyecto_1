@@ -20,7 +20,7 @@ namespace Presentacion
         {
             InitializeComponent();
             lstresultado = new List<ClientesPedidos>();
-            CargarCombos();
+           // CargarCombos();
         }
 
         private void limpiar()
@@ -33,7 +33,7 @@ namespace Presentacion
             cbomodopago.SelectedIndex = 0;
         }
 
-        private void CargarCombos()
+       /* private void CargarCombos()
         {
             try
             {
@@ -61,7 +61,7 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }*/
 
         private bool VerificarExistenciaCodigo()
         {
@@ -104,7 +104,8 @@ namespace Presentacion
                     p.Nombre = txtnombre.Text.Trim();
                     p.Producto = txtproducto.Text.Trim();
                     p.Direccion = txtdireccion.Text.Trim();
-                    p.Modo_Pago = (cbomodopago.SelectedValue.ToString().Equals("true")) ? true : false;
+                    // p.Modo_Pago = (cbomodopago.SelectedValue.ToString().Equals("true")) ? true : false;
+                    p.Modo_Pago = cbomodopago.Text.Trim();
 
                     Negocio.LNegocio.AgregarPedidos(p);
                     MessageBox.Show("Pedido agregado");
@@ -117,6 +118,13 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnsiguiente_Click(object sender, EventArgs e)
+        {
+          /*  FrmEstadoPedido frm = new FrmEstadoPedido();
+            frm.Show();
+            this.Hide();*/
         }
     }
 }

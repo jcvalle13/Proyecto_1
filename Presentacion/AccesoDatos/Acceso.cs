@@ -276,7 +276,8 @@ namespace AccesoDatos
                         p.Nombre = fila.ItemArray[1].ToString();
                         p.Producto = fila.ItemArray[2].ToString();
                         p.Direccion = fila.ItemArray[3].ToString();
-                        p.Modo_Pago = Convert.ToBoolean(fila.ItemArray[4].ToString());
+                        //p.Modo_Pago = Convert.ToBoolean(fila.ItemArray[4].ToString());
+                        p.Modo_Pago = fila.ItemArray[4].ToString();
 
                         lstresultados.Add(p);
                     }
