@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmMensajero : Form
+    public partial class FrmConsultaPedido : Form
     {
-        public FrmMensajero()
+        public FrmConsultaPedido()
         {
             InitializeComponent();
         }
 
-        private void btnsalir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

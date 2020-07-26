@@ -16,5 +16,10 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

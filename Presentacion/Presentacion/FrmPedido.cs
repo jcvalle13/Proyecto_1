@@ -122,9 +122,9 @@ namespace Presentacion
 
         private void btnsiguiente_Click(object sender, EventArgs e)
         {
-          /*  FrmEstadoPedido frm = new FrmEstadoPedido();
+           FrmConsultaPedido frm = new FrmConsultaPedido();
             frm.Show();
-            this.Hide();*/
+            this.Hide();
         }
     }
 }
