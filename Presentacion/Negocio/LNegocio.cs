@@ -173,12 +173,75 @@ namespace Negocio
             }
         }
 
-       
-        
+
+
 
         #endregion
 
 
+        #region Clientes Pedidos
+
+        public static int AgregarPedidos(ClientesPedidos P_Pedidos)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO Pedidos VALUES ('" + P_Pedidos.Identificacion + "','" + P_Pedidos.Nombre + "','" + P_Pedidos.Producto + "','" + P_Pedidos.Direccion + "','" + P_Pedidos.Modo_Pago + "')";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static List<ClientesPedidos> Consultar_Pedidos()
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, ModoPago FROM Pedidos";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Pedidos(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public static bool VerificarPedidos(ClientesPedidos P_Pedidos)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, ModoPago FROM Pedidos ";
+                objpeticion.Peticion += @"WHERE Identificacion = '" + P_Pedidos.Identificacion + "' AND ";
+                objpeticion.Peticion += @"Nombre = '" + P_Pedidos.Nombre + "' AND ";
+                objpeticion.Peticion += @"Producto = '" + P_Pedidos.Producto + "'";
+                objpeticion.Peticion += @"Direccion = '" + P_Pedidos.Direccion + "'";
+                objpeticion.Peticion += @"ModoPago = '" + P_Pedidos.Modo_Pago + "'";
+
+                Acceso objacceso = new Acceso();
+                List<ClientesPedidos> lstresultados = objacceso.Consultar_Pedidos(objpeticion);
+
+                if (lstresultados.Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
 
     }
 }

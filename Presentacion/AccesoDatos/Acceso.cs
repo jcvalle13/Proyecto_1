@@ -243,6 +243,57 @@ namespace AccesoDatos
             return lstresultados;
         }
 
+        public List<ClientesPedidos> Consultar_Pedidos(SQLParametros P_Peticion)
+        {
+            List<ClientesPedidos> lstresultados = new List<ClientesPedidos>();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+
+                SqlDataAdapter objconsultapedido = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                objconsultapedido.Fill(dt);
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        ClientesPedidos p = new ClientesPedidos();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        p.Identificacion = fila.ItemArray[0].ToString();
+                        p.Nombre = fila.ItemArray[1].ToString();
+                        p.Producto = fila.ItemArray[2].ToString();
+                        p.Direccion = fila.ItemArray[3].ToString();
+                        p.Modo_Pago = Convert.ToBoolean(fila.ItemArray[4].ToString());
+
+                        lstresultados.Add(p);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
+
 
         #endregion
 

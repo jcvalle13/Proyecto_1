@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtidentificacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.txtproducto = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnpedir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbomodopago = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -53,12 +53,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Por favor llenar todos los campos";
             // 
-            // textBox1
+            // txtidentificacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtidentificacion.Location = new System.Drawing.Point(168, 135);
+            this.txtidentificacion.Name = "txtidentificacion";
+            this.txtidentificacion.Size = new System.Drawing.Size(208, 20);
+            this.txtidentificacion.TabIndex = 1;
             // 
             // label2
             // 
@@ -100,26 +100,26 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Identificación:";
             // 
-            // textBox2
+            // txtdireccion
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 232);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtdireccion.Location = new System.Drawing.Point(168, 232);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(208, 20);
+            this.txtdireccion.TabIndex = 6;
             // 
-            // textBox3
+            // txtproducto
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtproducto.Location = new System.Drawing.Point(168, 198);
+            this.txtproducto.Name = "txtproducto";
+            this.txtproducto.Size = new System.Drawing.Size(208, 20);
+            this.txtproducto.TabIndex = 7;
             // 
-            // textBox4
+            // txtnombre
             // 
-            this.textBox4.Location = new System.Drawing.Point(168, 165);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(208, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtnombre.Location = new System.Drawing.Point(168, 165);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(208, 20);
+            this.txtnombre.TabIndex = 8;
             // 
             // label6
             // 
@@ -152,31 +152,34 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Modo de pago:";
             // 
-            // comboBox1
+            // cbomodopago
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 270);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cbomodopago.FormattingEnabled = true;
+            this.cbomodopago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Credit Card"});
+            this.cbomodopago.Location = new System.Drawing.Point(168, 270);
+            this.cbomodopago.Name = "cbomodopago";
+            this.cbomodopago.Size = new System.Drawing.Size(208, 21);
+            this.cbomodopago.TabIndex = 12;
             // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 401);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnpedir);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txtproducto);
+            this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtidentificacion);
             this.Controls.Add(this.label1);
             this.Name = "FrmPedido";
             this.Text = "Formalización de Pedido";
@@ -188,17 +191,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtidentificacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.TextBox txtproducto;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnpedir;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbomodopago;
     }
 }
