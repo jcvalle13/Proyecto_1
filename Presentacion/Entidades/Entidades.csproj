@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientesPedidos.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="SQLParametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
