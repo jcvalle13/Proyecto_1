@@ -203,7 +203,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, ModoPago FROM Pedidos";
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Modo_Pago FROM Pedidos";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Pedidos(objpeticion);
@@ -220,12 +220,12 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, ModoPago FROM Pedidos ";
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Modo_Pago FROM Pedidos ";
                 objpeticion.Peticion += @"WHERE Identificacion = '" + P_Pedidos.Identificacion + "' AND ";
                 objpeticion.Peticion += @"Nombre = '" + P_Pedidos.Nombre + "' AND ";
                 objpeticion.Peticion += @"Producto = '" + P_Pedidos.Producto + "'";
                 objpeticion.Peticion += @"Direccion = '" + P_Pedidos.Direccion + "'";
-                objpeticion.Peticion += @"ModoPago = '" + P_Pedidos.Modo_Pago + "'";
+                objpeticion.Peticion += @"Modo_Pago = '" + P_Pedidos.Modo_Pago + "'";
 
                 Acceso objacceso = new Acceso();
                 List<ClientesPedidos> lstresultados = objacceso.Consultar_Pedidos(objpeticion);

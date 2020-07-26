@@ -45,6 +45,7 @@ namespace Presentacion
                 dt.Columns.Add("Nombre");
                 dt.Columns.Add("Producto");
                 dt.Columns.Add("Direccion");
+                dt.Columns.Add("Modo_Pago");
 
                 //Insertando información a esa tabla
                 dt.Rows.Add("true", "Efectivo");
