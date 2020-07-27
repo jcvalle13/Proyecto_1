@@ -19,7 +19,9 @@ namespace Presentacion
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmMenu frm = new frmMenu();
+            frm.Show();
+            this.Hide();
         }
     }
 }

@@ -174,11 +174,17 @@ namespace Presentacion
             cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();//.Equals("Activo") ? true : false;
         }
 
+
+
         #endregion
 
         #endregion
 
-
-
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+            frmMenu frm = new frmMenu();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

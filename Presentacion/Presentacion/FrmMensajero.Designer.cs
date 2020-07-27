@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnatras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -138,22 +138,22 @@
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
             // 
-            // btnsalir
+            // btnatras
             // 
-            this.btnsalir.Location = new System.Drawing.Point(440, 65);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(89, 41);
-            this.btnsalir.TabIndex = 14;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = true;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            this.btnatras.Location = new System.Drawing.Point(440, 65);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(89, 41);
+            this.btnatras.TabIndex = 14;
+            this.btnatras.Text = "Atrás";
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // FrmMensajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 299);
-            this.Controls.Add(this.btnsalir);
+            this.Controls.Add(this.btnatras);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.label4);
@@ -185,6 +185,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnmodificar;
-        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnatras;
     }
 }

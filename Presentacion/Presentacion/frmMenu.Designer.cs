@@ -42,6 +42,8 @@
             this.listarMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +79,8 @@
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.perfilesToolStripMenuItem});
+            this.perfilesToolStripMenuItem,
+            this.mensajeroToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -141,7 +144,8 @@
             // pedidosToolStripMenuItem
             // 
             this.pedidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadoPedidosToolStripMenuItem});
+            this.estadoPedidosToolStripMenuItem,
+            this.estadoPedidoToolStripMenuItem});
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
             this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
@@ -149,9 +153,24 @@
             // estadoPedidosToolStripMenuItem
             // 
             this.estadoPedidosToolStripMenuItem.Name = "estadoPedidosToolStripMenuItem";
-            this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.estadoPedidosToolStripMenuItem.Text = "Estado pedidos";
-             // 
+            this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.estadoPedidosToolStripMenuItem.Text = "Consulta de pedidos";
+            this.estadoPedidosToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidosToolStripMenuItem_Click);
+            // 
+            // mensajeroToolStripMenuItem
+            // 
+            this.mensajeroToolStripMenuItem.Name = "mensajeroToolStripMenuItem";
+            this.mensajeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mensajeroToolStripMenuItem.Text = "Mensajero";
+            this.mensajeroToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
+            // 
+            // estadoPedidoToolStripMenuItem
+            // 
+            this.estadoPedidoToolStripMenuItem.Name = "estadoPedidoToolStripMenuItem";
+            this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
+            this.estadoPedidoToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidoToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,5 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoPedidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadoPedidoToolStripMenuItem;
     }
 }

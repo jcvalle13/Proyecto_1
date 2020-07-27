@@ -65,6 +65,25 @@ namespace Presentacion
             frm.Show();
         }
 
-    
+        private void estadoPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaPedidosAdm frm = new FrmConsultaPedidosAdm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mensajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMensajero frm = new FrmMensajero();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void estadoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstadoPedido frm = new FrmEstadoPedido();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

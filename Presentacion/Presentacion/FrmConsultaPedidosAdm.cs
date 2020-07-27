@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmMensajero : Form
+    public partial class FrmConsultaPedidosAdm : Form
     {
-        public FrmMensajero()
+        public FrmConsultaPedidosAdm()
         {
             InitializeComponent();
         }
 
-        private void btnsalir_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             frmMenu frm = new frmMenu();
             frm.Show();

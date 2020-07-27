@@ -39,7 +39,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnescoger = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnatras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,22 +134,22 @@
             this.btnescoger.Text = "Escoger";
             this.btnescoger.UseVisualStyleBackColor = true;
             // 
-            // btnsalir
+            // btnatras
             // 
-            this.btnsalir.Location = new System.Drawing.Point(621, 327);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(88, 35);
-            this.btnsalir.TabIndex = 11;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = true;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            this.btnatras.Location = new System.Drawing.Point(621, 327);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(88, 35);
+            this.btnatras.TabIndex = 11;
+            this.btnatras.Text = "Atras";
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // FrmEstadoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 392);
-            this.Controls.Add(this.btnsalir);
+            this.Controls.Add(this.btnatras);
             this.Controls.Add(this.btnescoger);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -182,6 +182,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button btnescoger;
-        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnatras;
     }
 }
