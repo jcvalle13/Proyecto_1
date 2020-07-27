@@ -243,5 +243,86 @@ namespace Negocio
 
         #endregion
 
+
+        #region Mensajeros
+
+        public static int AgregarMensajero(Mensajero m_Mensajero)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO Mensajero VALUES ('" + m_Mensajero.Identificacion + "','" + m_Mensajero.Nombre + "','" + m_Mensajero.Placa + "','" + m_Mensajero.Telefono + "')";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static int ModificarMensajero(Mensajero m_Mensajero)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"UPDATE mensajero SET Nombre = '" + m_Mensajero.Nombre + "', Placa = '" + m_Mensajero.Placa + "', Telefono = '" + m_Mensajero.Telefono + "' WHERE Identificacion = '" + m_Mensajero.Identificacion + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static List<Mensajero> Consultar_Mensajeros()
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Placa, Telefono FROM Mensajero";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Mensajeros(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public static bool VerificarMensajero(Mensajero m_Mensajero)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Placa, Telefono FROM Mensajero ";
+                objpeticion.Peticion += @"WHERE Identificacion = '" + m_Mensajero.Identificacion + "' AND ";
+                objpeticion.Peticion += @"Nombre = '" + m_Mensajero.Nombre + "' AND ";
+                objpeticion.Peticion += @"Placa = '" + m_Mensajero.Placa + "'";
+                objpeticion.Peticion += @"Telefono = '" + m_Mensajero.Telefono + "'";
+                
+
+                Acceso objacceso = new Acceso();
+                List<Mensajero> lstresultados = objacceso.Consultar_Mensajeros(objpeticion);
+
+                if (lstresultados.Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion 
+
     }
 }

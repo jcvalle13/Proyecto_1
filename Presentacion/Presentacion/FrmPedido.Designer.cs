@@ -41,6 +41,7 @@
             this.btnpedir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cbomodopago = new System.Windows.Forms.ComboBox();
+            this.btnsiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -163,11 +164,23 @@
             this.cbomodopago.Size = new System.Drawing.Size(208, 21);
             this.cbomodopago.TabIndex = 12;
             // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsiguiente.Location = new System.Drawing.Point(258, 329);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(118, 45);
+            this.btnsiguiente.TabIndex = 13;
+            this.btnsiguiente.Text = ">>>";
+            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 401);
+            this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnpedir);
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Button btnpedir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbomodopago;
+        private System.Windows.Forms.Button btnsiguiente;
     }
 }

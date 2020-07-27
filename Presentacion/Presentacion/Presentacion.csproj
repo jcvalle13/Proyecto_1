@@ -51,6 +51,30 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPedido.Designer.cs">
+      <DependentUpon>FrmConsultaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaPedidosAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaPedidosAdm.Designer.cs">
+      <DependentUpon>FrmConsultaPedidosAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstadoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstadoPedido.Designer.cs">
+      <DependentUpon>FrmEstadoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmManPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +92,12 @@
     </Compile>
     <Compile Include="FrmManUsuarios.Designer.cs">
       <DependentUpon>FrmManUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMensajero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMensajero.Designer.cs">
+      <DependentUpon>FrmMensajero.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -96,6 +126,18 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPedido.resx">
+      <DependentUpon>FrmConsultaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaPedidosAdm.resx">
+      <DependentUpon>FrmConsultaPedidosAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstadoPedido.resx">
+      <DependentUpon>FrmEstadoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmManPerfiles.resx">
       <DependentUpon>FrmManPerfiles.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManUsuarios.resx">
       <DependentUpon>FrmManUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMensajero.resx">
+      <DependentUpon>FrmMensajero.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

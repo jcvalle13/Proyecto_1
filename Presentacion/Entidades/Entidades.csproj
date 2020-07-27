@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientesPedidos.cs" />
+    <Compile Include="Mensajero.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="SQLParametros.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

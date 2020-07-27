@@ -198,9 +198,9 @@
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(479, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 45);
+            this.label1.Size = new System.Drawing.Size(272, 45);
             this.label1.TabIndex = 1;
-            this.label1.Text = "¿Qué se le anntoja?";
+            this.label1.Text = "¿Qué se le antoja?";
             // 
             // FrmClientes
             // 
