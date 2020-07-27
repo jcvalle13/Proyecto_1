@@ -107,7 +107,7 @@ namespace Negocio
         #endregion
 
 
-        #region Perfiles
+         #region Perfiles
         public static int AgregarPerfil(Perfiles P_Perfil)
         {
             SQLParametros objpeticion = new SQLParametros();
