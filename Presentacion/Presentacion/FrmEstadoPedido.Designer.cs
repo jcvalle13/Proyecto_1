@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.components = new System.ComponentModel.Container();
+            this.pbcarga = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,33 +40,27 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnescoger = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btndecamino = new System.Windows.Forms.Button();
+            this.btnentregado = new System.Windows.Forms.Button();
+            this.btnenrestaurante = new System.Windows.Forms.Button();
+            this.pbcarga2 = new System.Windows.Forms.ProgressBar();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // pbcarga
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 252);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(420, 57);
-            this.progressBar1.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "En restaurante",
-            "De camino",
-            "Entregado"});
-            this.comboBox1.Location = new System.Drawing.Point(211, 341);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 1;
+            this.pbcarga.Location = new System.Drawing.Point(74, 256);
+            this.pbcarga.Name = "pbcarga";
+            this.pbcarga.Size = new System.Drawing.Size(211, 32);
+            this.pbcarga.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 337);
+            this.label1.Location = new System.Drawing.Point(12, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 23);
             this.label1.TabIndex = 2;
@@ -144,11 +138,60 @@
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btndecamino
+            // 
+            this.btndecamino.Location = new System.Drawing.Point(242, 326);
+            this.btndecamino.Name = "btndecamino";
+            this.btndecamino.Size = new System.Drawing.Size(96, 36);
+            this.btndecamino.TabIndex = 12;
+            this.btndecamino.Text = "De Camino";
+            this.btndecamino.UseVisualStyleBackColor = true;
+            this.btndecamino.Click += new System.EventHandler(this.btndecamino_Click);
+            // 
+            // btnentregado
+            // 
+            this.btnentregado.Location = new System.Drawing.Point(466, 326);
+            this.btnentregado.Name = "btnentregado";
+            this.btnentregado.Size = new System.Drawing.Size(96, 36);
+            this.btnentregado.TabIndex = 13;
+            this.btnentregado.Text = "Entregado";
+            this.btnentregado.UseVisualStyleBackColor = true;
+            this.btnentregado.Click += new System.EventHandler(this.btnentregado_Click);
+            // 
+            // btnenrestaurante
+            // 
+            this.btnenrestaurante.Location = new System.Drawing.Point(32, 327);
+            this.btnenrestaurante.Name = "btnenrestaurante";
+            this.btnenrestaurante.Size = new System.Drawing.Size(96, 36);
+            this.btnenrestaurante.TabIndex = 14;
+            this.btnenrestaurante.Text = "Inicio";
+            this.btnenrestaurante.UseVisualStyleBackColor = true;
+            this.btnenrestaurante.Click += new System.EventHandler(this.btnenrestaurante_Click);
+            // 
+            // pbcarga2
+            // 
+            this.pbcarga2.Location = new System.Drawing.Point(282, 256);
+            this.pbcarga2.Name = "pbcarga2";
+            this.pbcarga2.Size = new System.Drawing.Size(230, 32);
+            this.pbcarga2.TabIndex = 15;
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // FrmEstadoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 392);
+            this.Controls.Add(this.pbcarga2);
+            this.Controls.Add(this.btnenrestaurante);
+            this.Controls.Add(this.btnentregado);
+            this.Controls.Add(this.btndecamino);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.btnescoger);
             this.Controls.Add(this.textBox5);
@@ -159,8 +202,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pbcarga);
             this.Name = "FrmEstadoPedido";
             this.Text = "Estado del Pedido";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -171,8 +213,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ProgressBar pbcarga;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -183,5 +224,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button btnescoger;
         private System.Windows.Forms.Button btnatras;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btndecamino;
+        private System.Windows.Forms.Button btnentregado;
+        private System.Windows.Forms.Button btnenrestaurante;
+        private System.Windows.Forms.ProgressBar pbcarga2;
+        private System.Windows.Forms.Timer timer2;
     }
 }

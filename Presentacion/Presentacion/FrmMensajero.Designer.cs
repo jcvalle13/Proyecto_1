@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtidentificacion = new System.Windows.Forms.TextBox();
+            this.txtplaca = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txttelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,37 +48,37 @@
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 23);
+            this.label1.Size = new System.Drawing.Size(111, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cédula:";
+            this.label1.Text = "Identificación:";
             // 
-            // textBox1
+            // txtidentificacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtidentificacion.Location = new System.Drawing.Point(173, 65);
+            this.txtidentificacion.Name = "txtidentificacion";
+            this.txtidentificacion.Size = new System.Drawing.Size(179, 20);
+            this.txtidentificacion.TabIndex = 1;
             // 
-            // textBox2
+            // txtplaca
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtplaca.Location = new System.Drawing.Point(173, 140);
+            this.txtplaca.Name = "txtplaca";
+            this.txtplaca.Size = new System.Drawing.Size(179, 20);
+            this.txtplaca.TabIndex = 4;
             // 
-            // textBox3
+            // txtnombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(173, 102);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtnombre.Location = new System.Drawing.Point(173, 102);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(179, 20);
+            this.txtnombre.TabIndex = 5;
             // 
-            // textBox4
+            // txttelefono
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 178);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(179, 20);
-            this.textBox4.TabIndex = 6;
+            this.txttelefono.Location = new System.Drawing.Point(173, 178);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(179, 20);
+            this.txttelefono.TabIndex = 6;
             // 
             // label5
             // 
@@ -128,6 +128,7 @@
             this.btnagregar.TabIndex = 12;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // btnmodificar
             // 
@@ -137,6 +138,7 @@
             this.btnmodificar.TabIndex = 13;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnatras
             // 
@@ -160,10 +162,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txtplaca);
+            this.Controls.Add(this.txtidentificacion);
             this.Controls.Add(this.label1);
             this.Name = "FrmMensajero";
             this.Text = "Ingresar Mensajero";
@@ -175,10 +177,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtidentificacion;
+        private System.Windows.Forms.TextBox txtplaca;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

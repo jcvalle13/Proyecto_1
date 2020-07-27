@@ -20,7 +20,7 @@ namespace Presentacion
         {
             InitializeComponent();
             lstresultado = new List<ClientesPedidos>();
-           // CargarCombos();
+          
         }
 
         private void limpiar()
@@ -33,35 +33,7 @@ namespace Presentacion
             cbomodopago.SelectedIndex = 0;
         }
 
-       /* private void CargarCombos()
-        {
-            try
-            {
-                //Creando una tabla
-                DataTable dt = new DataTable();
-
-                //Creando las columnas a esa tabla
-                dt.Columns.Add("Identificacion");
-                dt.Columns.Add("Nombre");
-                dt.Columns.Add("Producto");
-                dt.Columns.Add("Direccion");
-                dt.Columns.Add("Modo_Pago");
-
-                //Insertando información a esa tabla
-                dt.Rows.Add("true", "Efectivo");
-                dt.Rows.Add("false", "Credit Card");
-
-                cbomodopago.DataSource = dt;
-                cbomodopago.DisplayMember = "Nombre";
-                cbomodopago.ValueMember = "Identificacion";
-                cbomodopago.Refresh();
-                cbomodopago.SelectedIndex = 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }*/
+     
 
         private bool VerificarExistenciaCodigo()
         {

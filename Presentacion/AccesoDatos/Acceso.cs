@@ -295,6 +295,56 @@ namespace AccesoDatos
             return lstresultados;
         }
 
+        public List<Mensajero> Consultar_Mensajeros(SQLParametros P_Peticion)
+        {
+            List<Mensajero> lstresultados = new List<Mensajero>();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+
+                SqlDataAdapter objconsultapedido = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                objconsultapedido.Fill(dt);
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        Mensajero m = new Mensajero();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        m.Identificacion = fila.ItemArray[0].ToString();
+                        m.Nombre = fila.ItemArray[1].ToString();
+                        m.Placa = fila.ItemArray[2].ToString();
+                        m.Telefono = Convert.ToInt32(fila.ItemArray[3].ToString());
+                       
+
+                        lstresultados.Add(m);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
 
         #endregion
 
