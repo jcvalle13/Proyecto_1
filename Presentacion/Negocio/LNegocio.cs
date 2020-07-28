@@ -110,7 +110,25 @@ namespace Negocio
          #region Perfiles
         public static int AgregarPerfil(Perfiles P_Perfil)
         {
-            SQLParametros objpeticion = new SQLParametros();
+
+
+           try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO Perfiles VALUES ('" + P_Perfil.cod_perfil + "','" + P_Perfil.descripcion + "','" + P_Perfil.estado + "')";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            //SE UTILIZA CON PARAMETROS
+           /* SQLParametros objpeticion = new SQLParametros();
 
 
             //Ajustar peticion para utilización con parametros
@@ -139,12 +157,32 @@ namespace Negocio
             objpeticion.LstParametros.Add(parametroEstado);
 
             Acceso objacceso = new Acceso();
-            return objacceso.Ejecutar_Peticiones(objpeticion);
+            return objacceso.Ejecutar_Peticiones(objpeticion);*/
+
+
+
+
         }
 
         public static int ModificarPerfil(Perfiles P_Perfil)
         {
-            try
+          try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"UPDATE Perfiles SET descripcion = '" + P_Perfil.cod_perfil + "', estado = '" + P_Perfil.estado + "' WHERE codigoperfil = '" + P_Perfil.cod_perfil + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+
+
+            /* try
             {
                 SQLParametros objpeticion = new SQLParametros();
                 objpeticion.Peticion = @"EXEC PA_ModificarPerfil @codigoperfil, @descripcion, @estado";
@@ -176,12 +214,27 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
-            }
+            }*/
         }
 
         public static int EliminarPerfil(Perfiles P_Perfil)
         {
+
             try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"DELETE FROM Perfiles WHERE codigoperfil = '" + P_Perfil.cod_perfil + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            /* try
             {
                 SQLParametros objpeticion = new SQLParametros();
                 objpeticion.Peticion = @"EXEC PA_EliminarPerfil @codigoperfil";
@@ -201,7 +254,7 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
-            }
+            }*/
         }
 
         public static List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil)

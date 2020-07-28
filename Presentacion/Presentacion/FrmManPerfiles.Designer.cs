@@ -55,7 +55,7 @@
             this.cboPerfiles.Location = new System.Drawing.Point(116, 93);
             this.cboPerfiles.Name = "cboPerfiles";
             this.cboPerfiles.Size = new System.Drawing.Size(100, 21);
-            this.cboPerfiles.TabIndex = 15;
+            this.cboPerfiles.TabIndex = 3;
             // 
             // txtDescripcion
             // 
@@ -63,7 +63,7 @@
             this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(216, 20);
-            this.txtDescripcion.TabIndex = 14;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // btnAgregar
             // 
@@ -75,7 +75,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(116, 120);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(79, 91);
-            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -119,7 +119,7 @@
             this.btnModificar.Location = new System.Drawing.Point(201, 120);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(80, 91);
-            this.btnModificar.TabIndex = 16;
+            this.btnModificar.TabIndex = 5;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -136,7 +136,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(287, 120);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(76, 91);
-            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -167,7 +167,7 @@
             this.btnatras.Location = new System.Drawing.Point(9, 175);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(53, 36);
-            this.btnatras.TabIndex = 19;
+            this.btnatras.TabIndex = 8;
             this.btnatras.Text = "Atrás";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
@@ -177,7 +177,7 @@
             this.txtcodigoperfil.Location = new System.Drawing.Point(116, 23);
             this.txtcodigoperfil.Name = "txtcodigoperfil";
             this.txtcodigoperfil.Size = new System.Drawing.Size(121, 20);
-            this.txtcodigoperfil.TabIndex = 18;
+            this.txtcodigoperfil.TabIndex = 1;
             // 
             // dgvPerfiles
             // 
@@ -200,7 +200,7 @@
             this.txtBuscar.Location = new System.Drawing.Point(576, 9);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(117, 20);
-            this.txtBuscar.TabIndex = 21;
+            this.txtBuscar.TabIndex = 7;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
@@ -217,6 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 260);
+            this.ControlBox = false;
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPerfiles);

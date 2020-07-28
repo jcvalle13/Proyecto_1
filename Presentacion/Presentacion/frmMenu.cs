@@ -49,6 +49,7 @@ namespace Presentacion
         private void LogoffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            Console.WriteLine("Conexion Finalizada");
         }
 
         private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)

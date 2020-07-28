@@ -37,6 +37,7 @@ namespace Presentacion
 
         private void limpiar()
         {
+            txtBuscar.Text = string.Empty;
             txtcodigoperfil.Text = string.Empty;
             txtDescripcion.Text = string.Empty;
             cboPerfiles.SelectedIndex = 0;
@@ -142,7 +143,7 @@ namespace Presentacion
                     perfil_user.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
 
                     LNegocio.AgregarPerfil(perfil_user);
-                    MessageBox.Show("Perfil agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Perfil Nuevo agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     limpiar();
                     CargarLista();
@@ -209,8 +210,6 @@ namespace Presentacion
             }
         }
 
-
-
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             try
@@ -231,12 +230,6 @@ namespace Presentacion
             cboPerfiles.SelectedValue = dgvPerfiles.Rows[e.RowIndex].Cells[2].Value.ToString();//.Equals("Activo") ? true : false;
         }
 
-
-
-        #endregion
-
-        #endregion
-
         private void btnatras_Click(object sender, EventArgs e)
         {
             frmMenu frm = new frmMenu();
@@ -244,6 +237,13 @@ namespace Presentacion
             this.Hide();
         }
 
-        
+
+        #endregion
+
+        #endregion
+
+
+
+
     }
 }
