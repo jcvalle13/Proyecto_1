@@ -141,6 +141,69 @@ namespace Negocio
             Acceso objacceso = new Acceso();
             return objacceso.Ejecutar_Peticiones(objpeticion);
         }
+
+        public static int ModificarPerfil(Perfiles P_Perfil)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"EXEC PA_ModificarPerfil @codigoperfil, @descripcion, @estado";
+
+                //Crear los parametros
+                SqlParameter parametroCodigo = new SqlParameter();
+                parametroCodigo.ParameterName = "@codigoperfil";
+                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+                parametroCodigo.Value = P_Perfil.cod_perfil;
+
+                SqlParameter parametroDescripcion = new SqlParameter();
+                parametroDescripcion.ParameterName = "@descripcion";
+                parametroDescripcion.SqlDbType = System.Data.SqlDbType.VarChar;
+                parametroDescripcion.Value = P_Perfil.descripcion;
+
+                SqlParameter parametroEstado = new SqlParameter();
+                parametroEstado.ParameterName = "@estado";
+                parametroEstado.SqlDbType = System.Data.SqlDbType.Bit;
+                parametroEstado.Value = P_Perfil.estado;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroCodigo);
+                objpeticion.LstParametros.Add(parametroDescripcion);
+                objpeticion.LstParametros.Add(parametroEstado);
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static int EliminarPerfil(Perfiles P_Perfil)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"EXEC PA_EliminarPerfil @codigoperfil";
+
+                //Crear los parametros
+                SqlParameter parametroCodigo = new SqlParameter();
+                parametroCodigo.ParameterName = "@codigoperfil";
+                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+                parametroCodigo.Value = P_Perfil.cod_perfil;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroCodigo);
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static List<Perfiles> ConsultarPerfiles(Perfiles P_Perfil)
         {
             try
@@ -148,11 +211,11 @@ namespace Negocio
                 try
                 {
                     SQLParametros objpeticion = new SQLParametros();
-                    objpeticion.Peticion = @"EXEC PA_ConsultarPerfiles @codperfil";
+                    objpeticion.Peticion = @"EXEC PA_ConsultarPerfiles @codigoperfil";
 
                     //Crear los parametros
                     SqlParameter parametroCodigo = new SqlParameter();
-                    parametroCodigo.ParameterName = "@codperfil";
+                    parametroCodigo.ParameterName = "@codigoperfil";
                     parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
                     parametroCodigo.Value = P_Perfil.cod_perfil;
 
@@ -172,6 +235,9 @@ namespace Negocio
                 throw ex;
             }
         }
+
+
+
 
 
 

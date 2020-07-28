@@ -155,6 +155,62 @@ namespace Presentacion
             }
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!EsError)
+                {
+                    Perfiles p = new Perfiles();
+
+                    p.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
+                    p.descripcion = txtDescripcion.Text.Trim();
+                    p.estado = (cboPerfiles.SelectedValue.ToString().Equals("true")) ? true : false;
+
+                    LNegocio.ModificarPerfil(p);
+                    MessageBox.Show("Perfil modificado");
+                    limpiar();
+                    CargarLista();
+                    txtcodigoperfil.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!EsError)
+                {
+                    if (!VerificarExistenciaCodigo())
+                    {
+                        MessageBox.Show("El código digitado no existe en base de datos, por favor cambiarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    Perfiles p = new Perfiles();
+
+                    p.cod_perfil = Convert.ToInt32(txtcodigoperfil.Text.Trim());
+
+                    LNegocio.EliminarPerfil(p);
+                    MessageBox.Show("Perfil eliminado");
+                    limpiar();
+                    CargarLista();
+                    txtcodigoperfil.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             try
@@ -187,5 +243,7 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        
     }
 }
