@@ -28,6 +28,7 @@ namespace Presentacion
             InitializeComponent();
             CargarLista();
             CargarCombos();
+           
         }
 
         #region Metodos 

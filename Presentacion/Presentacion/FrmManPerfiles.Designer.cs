@@ -38,12 +38,12 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnatras = new System.Windows.Forms.Button();
             this.txtcodigoperfil = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvPerfiles = new System.Windows.Forms.DataGridView();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnatras = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerfiles)).BeginInit();
             this.SuspendLayout();
@@ -52,17 +52,17 @@
             // 
             this.cboPerfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPerfiles.FormattingEnabled = true;
-            this.cboPerfiles.Location = new System.Drawing.Point(133, 93);
+            this.cboPerfiles.Location = new System.Drawing.Point(116, 93);
             this.cboPerfiles.Name = "cboPerfiles";
             this.cboPerfiles.Size = new System.Drawing.Size(100, 21);
             this.cboPerfiles.TabIndex = 15;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(133, 56);
+            this.txtDescripcion.Location = new System.Drawing.Point(116, 56);
             this.txtDescripcion.MaxLength = 50;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(311, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(216, 20);
             this.txtDescripcion.TabIndex = 14;
             // 
             // btnAgregar
@@ -72,7 +72,7 @@
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregar.Location = new System.Drawing.Point(133, 120);
+            this.btnAgregar.Location = new System.Drawing.Point(116, 120);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(79, 91);
             this.btnAgregar.TabIndex = 12;
@@ -116,7 +116,7 @@
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.Location = new System.Drawing.Point(235, 120);
+            this.btnModificar.Location = new System.Drawing.Point(201, 120);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(80, 91);
             this.btnModificar.TabIndex = 16;
@@ -132,7 +132,7 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(335, 120);
+            this.button2.Location = new System.Drawing.Point(287, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 91);
             this.button2.TabIndex = 17;
@@ -155,14 +155,24 @@
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(469, 236);
+            this.groupBox1.Size = new System.Drawing.Size(378, 236);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información";
             // 
+            // btnatras
+            // 
+            this.btnatras.Location = new System.Drawing.Point(9, 175);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(53, 36);
+            this.btnatras.TabIndex = 19;
+            this.btnatras.Text = "Atrás";
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
             // txtcodigoperfil
             // 
-            this.txtcodigoperfil.Location = new System.Drawing.Point(133, 23);
+            this.txtcodigoperfil.Location = new System.Drawing.Point(116, 23);
             this.txtcodigoperfil.Name = "txtcodigoperfil";
             this.txtcodigoperfil.Size = new System.Drawing.Size(121, 20);
             this.txtcodigoperfil.TabIndex = 18;
@@ -174,12 +184,12 @@
             this.dgvPerfiles.AllowUserToOrderColumns = true;
             this.dgvPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerfiles.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvPerfiles.Location = new System.Drawing.Point(487, 38);
+            this.dgvPerfiles.Location = new System.Drawing.Point(396, 38);
             this.dgvPerfiles.Name = "dgvPerfiles";
             this.dgvPerfiles.ReadOnly = true;
             this.dgvPerfiles.RowHeadersVisible = false;
             this.dgvPerfiles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerfiles.Size = new System.Drawing.Size(206, 210);
+            this.dgvPerfiles.Size = new System.Drawing.Size(297, 210);
             this.dgvPerfiles.TabIndex = 19;
             this.dgvPerfiles.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerfiles_CellContentClick);
             // 
@@ -199,16 +209,6 @@
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Codigo a buscar:";
-            // 
-            // btnatras
-            // 
-            this.btnatras.Location = new System.Drawing.Point(9, 175);
-            this.btnatras.Name = "btnatras";
-            this.btnatras.Size = new System.Drawing.Size(53, 36);
-            this.btnatras.TabIndex = 19;
-            this.btnatras.Text = "Atrás";
-            this.btnatras.UseVisualStyleBackColor = true;
-            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
             // FrmManPerfiles
             // 
