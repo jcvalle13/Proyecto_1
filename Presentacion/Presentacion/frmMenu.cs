@@ -28,15 +28,16 @@ namespace Presentacion
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
             pedidosToolStripMenuItem.Visible = false;
+            mensajeroToolStripMenuItem.Visible = false;
 
             foreach (Usuarios item in lstusuarios)
             {
                 switch (item.Perfiles.cod_perfil)
                 {
-                    case 1: { consultasToolStripMenuItem.Visible = true; } break;
-                    case 2: { mantenimientosToolStripMenuItem.Visible = true; } break;
+                    case 1: { mantenimientosToolStripMenuItem.Visible = true; } break;
+                    case 2: { consultasToolStripMenuItem.Visible = true; } break;
                     case 3: { pedidosToolStripMenuItem.Visible = true; } break;
-                    case 4: { } break;
+                    case 4: { mensajeroToolStripMenuItem.Visible = true; } break;
                     case 5: { } break;
                 }
             }

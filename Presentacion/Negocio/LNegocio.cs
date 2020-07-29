@@ -126,8 +126,8 @@ namespace Negocio
             #endregion
 
 
-            #region Perfiles
-            public static int AgregarPerfil(Perfiles P_Perfil)
+        #region Perfiles
+        public static int AgregarPerfil(Perfiles P_Perfil)
         {
 
 
@@ -308,12 +308,6 @@ namespace Negocio
             }
         }
 
-
-
-
-
-
-
         #endregion
 
 
@@ -336,14 +330,40 @@ namespace Negocio
             }
         }
 
-        public static List<ClientesPedidos> Consultar_Pedidos()
+       public static List<ClientesPedidos> Consultar_Pedidos()
         {
-            try
+
+            /*try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"EXEC PA_ConsultaPedidos @Identificacion";
+
+                //Crear los parametros
+                SqlParameter parametroCodigo = new SqlParameter();
+                parametroCodigo.ParameterName = "@Identificacion";
+                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
+                parametroCodigo.Value = C_Pedidos.Identificacion;
+
+                //Agrega a la lista de parametros los parametros creados
+                objpeticion.LstParametros.Add(parametroCodigo);
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Pedidos(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }*/
+
+
+
+             try
             {
                 SQLParametros objpeticion = new SQLParametros();
                 objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Modo_Pago FROM Pedidos";
 
                 Acceso objacceso = new Acceso();
+               
                 return objacceso.Consultar_Pedidos(objpeticion);
             }
             catch (Exception ex)
@@ -355,7 +375,7 @@ namespace Negocio
 
         public static bool VerificarPedidos(ClientesPedidos P_Pedidos)
         {
-            try
+              try
             {
                 SQLParametros objpeticion = new SQLParametros();
                 objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Modo_Pago FROM Pedidos ";

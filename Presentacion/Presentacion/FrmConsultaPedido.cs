@@ -14,12 +14,14 @@ namespace Presentacion
 {
     public partial class FrmConsultaPedido : Form
     {
-      
+        //public List<ClientesPedidos> lstresultado { get; set; }
         public FrmConsultaPedido()
         {
-            
+            //lstresultado = new List<ClientesPedidos>();
             InitializeComponent();
-           
+           // CargarConsultaPedido();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,10 +29,42 @@ namespace Presentacion
             this.Close();
         }
 
-      
+       /* private void CargarConsultaPedido()
+        {
+            try
+            {
+                lstresultado = new List<ClientesPedidos>();
 
-        
+                if (txtcedula.Text.Length == 0 || txtcedula.Text.Equals("0"))
+                    lstresultado = LNegocio.Consultar_Pedidos(new ClientesPedidos { Identificacion = 0 });
+                else
+                    lstresultado = LNegocio.Consultar_Pedidos(new ClientesPedidos { Identificacion = Convert.ToInt32(txtcedula.Text) });
 
-        
+                dgvpedidos.DataSource = null;
+                dgvpedidos.Refresh();
+
+                dgvpedidos.DataSource = lstresultado;
+                dgvpedidos.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }*/
+
+
+        /*private void txtcedula_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CargarConsultaPedido();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }*/
     }
 }

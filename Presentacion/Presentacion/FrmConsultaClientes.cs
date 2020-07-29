@@ -30,10 +30,15 @@ namespace Presentacion
         {
             try
             {
+
                 List<ClientesPedidos> lstresultado = LNegocio.Consultar_Pedidos();
 
-                this.dgvclientes.DataSource = lstresultado;
+                this.dgvclientes.DataSource = null;
                 this.dgvclientes.Refresh();
+
+
+                dgvclientes.DataSource = lstresultado;
+                dgvclientes.Refresh();
             }
             catch (Exception ex)
             {
