@@ -64,6 +64,7 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
+            
 
         }
 
@@ -232,6 +233,8 @@ namespace Presentacion
 
         private void btnatras_Click(object sender, EventArgs e)
         {
+
+
             frmMenu frm = new frmMenu();
             frm.Show();
             this.Hide();
