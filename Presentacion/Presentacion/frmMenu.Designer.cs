@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,6 +166,13 @@
             this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngine1.SkinFile = "C:\\Users\\jcval\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
+    "NET\\Wave\\Wave.ssk";
+            this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,5 +210,6 @@
         private System.Windows.Forms.ToolStripMenuItem estadoPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoPedidoToolStripMenuItem;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }
