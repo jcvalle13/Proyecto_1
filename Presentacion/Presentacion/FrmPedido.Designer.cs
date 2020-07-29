@@ -42,6 +42,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbomodopago = new System.Windows.Forms.ComboBox();
             this.btnsiguiente = new System.Windows.Forms.Button();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -135,7 +137,7 @@
             // btnpedir
             // 
             this.btnpedir.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpedir.Location = new System.Drawing.Point(57, 329);
+            this.btnpedir.Location = new System.Drawing.Point(57, 362);
             this.btnpedir.Name = "btnpedir";
             this.btnpedir.Size = new System.Drawing.Size(118, 45);
             this.btnpedir.TabIndex = 10;
@@ -147,7 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 270);
+            this.label7.Location = new System.Drawing.Point(14, 304);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(138, 27);
             this.label7.TabIndex = 11;
@@ -159,7 +161,7 @@
             this.cbomodopago.Items.AddRange(new object[] {
             "Efectivo",
             "Credit Card"});
-            this.cbomodopago.Location = new System.Drawing.Point(168, 270);
+            this.cbomodopago.Location = new System.Drawing.Point(168, 304);
             this.cbomodopago.Name = "cbomodopago";
             this.cbomodopago.Size = new System.Drawing.Size(208, 21);
             this.cbomodopago.TabIndex = 12;
@@ -167,7 +169,7 @@
             // btnsiguiente
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsiguiente.Location = new System.Drawing.Point(258, 329);
+            this.btnsiguiente.Location = new System.Drawing.Point(258, 362);
             this.btnsiguiente.Name = "btnsiguiente";
             this.btnsiguiente.Size = new System.Drawing.Size(118, 45);
             this.btnsiguiente.TabIndex = 13;
@@ -175,11 +177,30 @@
             this.btnsiguiente.UseVisualStyleBackColor = true;
             this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
             // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(168, 268);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(208, 20);
+            this.txttelefono.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(14, 265);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 27);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Telefono:";
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 401);
+            this.ClientSize = new System.Drawing.Size(447, 483);
+            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.label7);
@@ -217,5 +238,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbomodopago;
         private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label label8;
     }
 }
