@@ -141,6 +141,7 @@
             this.listadoCantidadDePaquetesToolStripMenuItem.Name = "listadoCantidadDePaquetesToolStripMenuItem";
             this.listadoCantidadDePaquetesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.listadoCantidadDePaquetesToolStripMenuItem.Text = "Listado de Clientes";
+            this.listadoCantidadDePaquetesToolStripMenuItem.Click += new System.EventHandler(this.listadoCantidadDePaquetesToolStripMenuItem_Click);
             // 
             // pedidosToolStripMenuItem
             // 

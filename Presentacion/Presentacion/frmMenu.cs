@@ -92,5 +92,12 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        private void listadoCantidadDePaquetesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaClientes frm = new FrmConsultaClientes();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
