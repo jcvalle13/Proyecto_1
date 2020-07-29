@@ -47,6 +47,8 @@ namespace Negocio
             }
         }
 
+
+
         public static List<Usuarios> Consultar_Usuarios()
         {
             try
@@ -104,11 +106,28 @@ namespace Negocio
             }
         }
 
-        #endregion
+        //revisar codigo, no elimina, solo sale msj
+         public static int EliminarUsuario(Usuarios P_usuario)
+         {
+
+             try
+             {
+                 SQLParametros objpeticion = new SQLParametros();
+                 objpeticion.Peticion = @"DELETE FROM Usuarioss WHERE Usuario = '" + P_usuario.Usuario + "'";
+
+                 Acceso objacceso = new Acceso();
+                 return objacceso.Ejecutar_Peticiones(objpeticion);
+             }
+             catch (Exception ex)
+             {
+                 throw ex;
+             }
+         }
+            #endregion
 
 
-         #region Perfiles
-        public static int AgregarPerfil(Perfiles P_Perfil)
+            #region Perfiles
+            public static int AgregarPerfil(Perfiles P_Perfil)
         {
 
 

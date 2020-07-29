@@ -40,6 +40,7 @@
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnatras = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +123,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Location = new System.Drawing.Point(35, 234);
+            this.btnagregar.Location = new System.Drawing.Point(37, 234);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(101, 37);
             this.btnagregar.TabIndex = 12;
@@ -132,7 +133,7 @@
             // 
             // btnmodificar
             // 
-            this.btnmodificar.Location = new System.Drawing.Point(251, 234);
+            this.btnmodificar.Location = new System.Drawing.Point(144, 234);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(101, 37);
             this.btnmodificar.TabIndex = 13;
@@ -150,11 +151,21 @@
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Location = new System.Drawing.Point(251, 234);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(101, 37);
+            this.btneliminar.TabIndex = 15;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            // 
             // FrmMensajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 299);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnatras);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnatras;
+        private System.Windows.Forms.Button btneliminar;
     }
 }

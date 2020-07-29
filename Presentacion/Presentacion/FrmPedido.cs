@@ -43,7 +43,7 @@ namespace Presentacion
             {
                 foreach (ClientesPedidos item in lstresultado)
                 {
-                    if (item.Identificacion == txtidentificacion.Text.Trim())
+                    if (item.Identificacion == Convert.ToInt32(txtidentificacion.Text.Trim()))
                     {
                         L_resultado = true; // Es igual a encontro el codigo
                         break;
@@ -72,7 +72,7 @@ namespace Presentacion
 
                     ClientesPedidos p = new ClientesPedidos();
 
-                    p.Identificacion = txtidentificacion.Text.Trim();
+                    p.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
                     p.Nombre = txtnombre.Text.Trim();
                     p.Producto = txtproducto.Text.Trim();
                     p.Direccion = txtdireccion.Text.Trim();

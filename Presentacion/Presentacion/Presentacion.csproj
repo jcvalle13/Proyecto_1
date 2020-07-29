@@ -51,17 +51,29 @@
     <Compile Include="FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaMensajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaMensajeros.Designer.cs">
+      <DependentUpon>FrmConsultaMensajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConsultaPedido.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConsultaPedido.Designer.cs">
       <DependentUpon>FrmConsultaPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsultaPedidosAdm.cs">
+    <Compile Include="FrmConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConsultaPedidosAdm.Designer.cs">
-      <DependentUpon>FrmConsultaPedidosAdm.cs</DependentUpon>
+    <Compile Include="FrmConsultaClientes.Designer.cs">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaUsuarios.Designer.cs">
+      <DependentUpon>FrmConsultaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEstadoPedido.cs">
       <SubType>Form</SubType>
@@ -126,11 +138,17 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaMensajeros.resx">
+      <DependentUpon>FrmConsultaMensajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsultaPedido.resx">
       <DependentUpon>FrmConsultaPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsultaPedidosAdm.resx">
-      <DependentUpon>FrmConsultaPedidosAdm.cs</DependentUpon>
+    <EmbeddedResource Include="FrmConsultaClientes.resx">
+      <DependentUpon>FrmConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaUsuarios.resx">
+      <DependentUpon>FrmConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstadoPedido.resx">
       <DependentUpon>FrmEstadoPedido.cs</DependentUpon>

@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btneliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnmenu
@@ -124,11 +125,23 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Usuario:";
             // 
+            // btneliminar
+            // 
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(224, 116);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(100, 44);
+            this.btneliminar.TabIndex = 20;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
             // FrmManUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 174);
+            this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmenu);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
@@ -159,5 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btneliminar;
     }
 }

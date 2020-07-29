@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class ClientesPedidos
     {
-        public string Identificacion { get; set; }
+        public int Identificacion { get; set; }
         public string Nombre { get; set; }
         public string Producto { get; set; }
         public string Direccion { get; set; }
@@ -18,7 +18,7 @@ namespace Entidades
         public ClientesPedidos()
 
         {
-            Identificacion = string.Empty;
+            Identificacion = 0;
             Nombre = string.Empty;
             Producto = string.Empty;
             Direccion = string.Empty;

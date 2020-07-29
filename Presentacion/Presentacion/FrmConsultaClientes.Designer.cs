@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class FrmConsultaPedidosAdm
+    partial class FrmConsultaClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.btnatras = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvclientes = new System.Windows.Forms.DataGridView();
+            this.btnmostrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnatras
             // 
-            this.btnatras.Location = new System.Drawing.Point(523, 22);
+            this.btnatras.Location = new System.Drawing.Point(530, 128);
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(93, 47);
             this.btnatras.TabIndex = 0;
@@ -43,24 +44,35 @@
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dgvclientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 153);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvclientes.Location = new System.Drawing.Point(12, 22);
+            this.dgvclientes.Name = "dgvclientes";
+            this.dgvclientes.Size = new System.Drawing.Size(478, 153);
+            this.dgvclientes.TabIndex = 1;
             // 
-            // FrmConsultaPedidosAdm
+            // btnmostrar
+            // 
+            this.btnmostrar.Location = new System.Drawing.Point(530, 22);
+            this.btnmostrar.Name = "btnmostrar";
+            this.btnmostrar.Size = new System.Drawing.Size(93, 47);
+            this.btnmostrar.TabIndex = 2;
+            this.btnmostrar.Text = "Mostrar";
+            this.btnmostrar.UseVisualStyleBackColor = true;
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            // 
+            // FrmConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 204);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnmostrar);
+            this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnatras);
-            this.Name = "FrmConsultaPedidosAdm";
-            this.Text = "Consulta de Pedidos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "FrmConsultaClientes";
+            this.Text = "Consulta de Clientes y sus Pedidos";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,6 +80,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnatras;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvclientes;
+        private System.Windows.Forms.Button btnmostrar;
     }
 }

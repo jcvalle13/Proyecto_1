@@ -14,10 +14,10 @@ namespace AccesoDatos
     {
         #region Atributos
         //Configuracion string de conexion Joiner Proyecto1_Globo
-      private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
+      //private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
         
         //Configuracion string de conexion a base de datos Steph Glovo
-        //private string strconexion = Properties.Settings.Default.Glovo;
+        private string strconexion = Properties.Settings.Default.Glovo;
         private SqlConnection objconexion;
         #endregion
 
@@ -272,7 +272,7 @@ namespace AccesoDatos
                         ClientesPedidos p = new ClientesPedidos();
 
                         //Aqui se obtiene los valores de celda o columna por fila leida
-                        p.Identificacion = fila.ItemArray[0].ToString();
+                        p.Identificacion = Convert.ToInt32(fila.ItemArray[0].ToString());
                         p.Nombre = fila.ItemArray[1].ToString();
                         p.Producto = fila.ItemArray[2].ToString();
                         p.Direccion = fila.ItemArray[3].ToString();

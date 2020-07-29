@@ -34,15 +34,14 @@
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoHistóricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCantidadDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,16 +87,23 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
+            // 
+            // mensajeroToolStripMenuItem
+            // 
+            this.mensajeroToolStripMenuItem.Name = "mensajeroToolStripMenuItem";
+            this.mensajeroToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.mensajeroToolStripMenuItem.Text = "Mensajero";
+            this.mensajeroToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -105,8 +111,7 @@
             this.listadoDeUsuariosToolStripMenuItem,
             this.listadoHistóricoToolStripMenuItem,
             this.listadoDePaquetesToolStripMenuItem,
-            this.listadoCantidadDePaquetesToolStripMenuItem,
-            this.listarMToolStripMenuItem});
+            this.listadoCantidadDePaquetesToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -114,32 +119,28 @@
             // listadoDeUsuariosToolStripMenuItem
             // 
             this.listadoDeUsuariosToolStripMenuItem.Name = "listadoDeUsuariosToolStripMenuItem";
-            this.listadoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.listadoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.listadoDeUsuariosToolStripMenuItem.Text = "Listado de Usuarios";
+            this.listadoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeUsuariosToolStripMenuItem_Click);
             // 
             // listadoHistóricoToolStripMenuItem
             // 
             this.listadoHistóricoToolStripMenuItem.Name = "listadoHistóricoToolStripMenuItem";
-            this.listadoHistóricoToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.listadoHistóricoToolStripMenuItem.Text = "Listado Histórico";
+            this.listadoHistóricoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.listadoHistóricoToolStripMenuItem.Text = "Listado de Perfiles";
             // 
             // listadoDePaquetesToolStripMenuItem
             // 
             this.listadoDePaquetesToolStripMenuItem.Name = "listadoDePaquetesToolStripMenuItem";
-            this.listadoDePaquetesToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.listadoDePaquetesToolStripMenuItem.Text = "Listado de Paquetes";
+            this.listadoDePaquetesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.listadoDePaquetesToolStripMenuItem.Text = "Listado de Mensajeros";
+            this.listadoDePaquetesToolStripMenuItem.Click += new System.EventHandler(this.listadoDePaquetesToolStripMenuItem_Click);
             // 
             // listadoCantidadDePaquetesToolStripMenuItem
             // 
             this.listadoCantidadDePaquetesToolStripMenuItem.Name = "listadoCantidadDePaquetesToolStripMenuItem";
-            this.listadoCantidadDePaquetesToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.listadoCantidadDePaquetesToolStripMenuItem.Text = "Listado Cantidad de Paquetes";
-            // 
-            // listarMToolStripMenuItem
-            // 
-            this.listarMToolStripMenuItem.Name = "listarMToolStripMenuItem";
-            this.listarMToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.listarMToolStripMenuItem.Text = "Listar Monto Percibido";
+            this.listadoCantidadDePaquetesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.listadoCantidadDePaquetesToolStripMenuItem.Text = "Listado de Clientes";
             // 
             // pedidosToolStripMenuItem
             // 
@@ -155,21 +156,12 @@
             this.estadoPedidosToolStripMenuItem.Name = "estadoPedidosToolStripMenuItem";
             this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.estadoPedidosToolStripMenuItem.Text = "Consulta de pedidos";
-            this.estadoPedidosToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidosToolStripMenuItem_Click);
-            // 
-            // mensajeroToolStripMenuItem
-            // 
-            this.mensajeroToolStripMenuItem.Name = "mensajeroToolStripMenuItem";
-            this.mensajeroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mensajeroToolStripMenuItem.Text = "Mensajero";
-            this.mensajeroToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
             // 
             // estadoPedidoToolStripMenuItem
             // 
             this.estadoPedidoToolStripMenuItem.Name = "estadoPedidoToolStripMenuItem";
             this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
-            this.estadoPedidoToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidoToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -204,7 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem listadoHistóricoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoCantidadDePaquetesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarMToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;

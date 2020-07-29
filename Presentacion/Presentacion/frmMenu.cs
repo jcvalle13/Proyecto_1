@@ -66,13 +66,7 @@ namespace Presentacion
             frm.Show();
         }
 
-        private void estadoPedidosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmConsultaPedidosAdm frm = new FrmConsultaPedidosAdm();
-            frm.MdiParent = this;
-            frm.Show();
-        }
-
+   
         private void mensajeroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMensajero frm = new FrmMensajero();
@@ -80,11 +74,22 @@ namespace Presentacion
             frm.Show();
         }
 
-        private void estadoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+      
+
+       
+
+        private void listadoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmEstadoPedido frm = new FrmEstadoPedido();
-            frm.MdiParent = this;
+            FrmConsultaUsuarios frm = new FrmConsultaUsuarios();
             frm.Show();
+            this.Hide();
+        }
+
+        private void listadoDePaquetesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultaMensajeros frm = new FrmConsultaMensajeros();
+            frm.Show();
+            this.Hide();
         }
     }
 }
