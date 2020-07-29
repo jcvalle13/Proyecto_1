@@ -12,7 +12,11 @@ namespace Entidades
         public string Nombre { get; set; }
         public string Producto { get; set; }
         public string Direccion { get; set; }
+
+        public int Telefono { get; set; }
         public string Modo_Pago { get; set; }
+
+        public string Estado { get; set; }
 
         //public bool Modo_Pago { get; set;}
         public ClientesPedidos()
@@ -22,7 +26,9 @@ namespace Entidades
             Nombre = string.Empty;
             Producto = string.Empty;
             Direccion = string.Empty;
+            Telefono = 0;
             Modo_Pago = string.Empty;
+            Estado = string.Empty;
 
             //Modo_Pago = false;
         }

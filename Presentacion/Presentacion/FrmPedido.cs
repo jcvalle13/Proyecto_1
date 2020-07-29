@@ -30,6 +30,7 @@ namespace Presentacion
             txtnombre.Text = string.Empty;
             txtproducto.Text = string.Empty;
             txtdireccion.Text = string.Empty;
+            txttelefono.Text = string.Empty;
             cbomodopago.SelectedIndex = 0;
         }
 
@@ -76,7 +77,7 @@ namespace Presentacion
                     p.Nombre = txtnombre.Text.Trim();
                     p.Producto = txtproducto.Text.Trim();
                     p.Direccion = txtdireccion.Text.Trim();
-                    // p.Modo_Pago = (cbomodopago.SelectedValue.ToString().Equals("true")) ? true : false;
+                    p.Telefono = Convert.ToInt32(txttelefono.Text.Trim());
                     p.Modo_Pago = cbomodopago.Text.Trim();
 
                     Negocio.LNegocio.AgregarPedidos(p);
