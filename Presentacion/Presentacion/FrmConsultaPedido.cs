@@ -32,7 +32,9 @@ namespace Presentacion
         {
             
             MessageBox.Show("Gracias por preferirnos!", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Application.Exit();
+            FrmClientes frm = new FrmClientes();
+            frm.Show();
+            this.Hide();
         }
 
         private void estadoBindingNavigatorSaveItem_Click(object sender, EventArgs e)

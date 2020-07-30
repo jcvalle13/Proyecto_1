@@ -120,5 +120,26 @@ namespace Presentacion
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Mensajero m = new Mensajero();
+
+                m.Identificacion = txtidentificacion.Text.Trim();
+
+                LNegocio.EliminarMensajero(m);
+                MessageBox.Show("Mensajero Eliminado");
+                limpiar();
+
+                txtidentificacion.Focus();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -70,7 +70,7 @@
             this.txtidentificacion.Location = new System.Drawing.Point(314, 207);
             this.txtidentificacion.Name = "txtidentificacion";
             this.txtidentificacion.Size = new System.Drawing.Size(217, 20);
-            this.txtidentificacion.TabIndex = 3;
+            this.txtidentificacion.TabIndex = 1;
             // 
             // dgvestado
             // 
@@ -106,7 +106,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(96, 35);
             this.btnatras.TabIndex = 11;
-            this.btnatras.Text = "Atras";
+            this.btnatras.Text = "Menú";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
@@ -165,7 +165,7 @@
             this.cboestado.Location = new System.Drawing.Point(314, 233);
             this.cboestado.Name = "cboestado";
             this.cboestado.Size = new System.Drawing.Size(217, 21);
-            this.cboestado.TabIndex = 16;
+            this.cboestado.TabIndex = 2;
             // 
             // pbcarga3
             // 
@@ -197,6 +197,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbcarga);
             this.Name = "FrmEstadoPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estado del Pedido";
             ((System.ComponentModel.ISupportInitialize)(this.dgvestado)).EndInit();
             this.ResumeLayout(false);

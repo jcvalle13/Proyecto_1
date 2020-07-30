@@ -30,5 +30,11 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gracias por preferirnos!", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
+        }
     }
 }

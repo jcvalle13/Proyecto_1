@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.btnregresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.btnIngreso.Location = new System.Drawing.Point(172, 92);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(84, 37);
-            this.btnIngreso.TabIndex = 11;
+            this.btnIngreso.TabIndex = 3;
             this.btnIngreso.Text = "Ingresar";
             this.btnIngreso.UseVisualStyleBackColor = true;
             this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
@@ -66,14 +67,14 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(112, 20);
-            this.txtClave.TabIndex = 10;
+            this.txtClave.TabIndex = 2;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(172, 35);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(112, 20);
-            this.txtUsuario.TabIndex = 9;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label2
             // 
@@ -110,11 +111,22 @@
     "NET\\Wave\\Wave.ssk";
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 
+            // btnregresar
+            // 
+            this.btnregresar.Location = new System.Drawing.Point(32, 159);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(58, 22);
+            this.btnregresar.TabIndex = 15;
+            this.btnregresar.Text = "Regresar";
+            this.btnregresar.UseVisualStyleBackColor = true;
+            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 193);
+            this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblBloqueo);
             this.Controls.Add(this.btnIngreso);
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Button btnregresar;
     }
 }

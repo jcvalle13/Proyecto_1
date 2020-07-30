@@ -79,5 +79,12 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        private void btnatras_Click(object sender, EventArgs e)
+        {
+            FrmInicio frm = new FrmInicio();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

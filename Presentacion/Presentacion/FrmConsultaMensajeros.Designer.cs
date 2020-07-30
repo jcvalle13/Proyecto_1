@@ -58,7 +58,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(93, 47);
             this.btnatras.TabIndex = 6;
-            this.btnatras.Text = "Atrás";
+            this.btnatras.Text = "Menú";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 
@@ -71,6 +71,7 @@
             this.Controls.Add(this.dgvmensajeros);
             this.Controls.Add(this.btnatras);
             this.Name = "FrmConsultaMensajeros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de la Línea de Mensajeros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvmensajeros)).EndInit();
             this.ResumeLayout(false);

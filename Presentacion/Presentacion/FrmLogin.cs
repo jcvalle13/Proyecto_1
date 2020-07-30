@@ -76,5 +76,12 @@ namespace Presentacion
                 MessageBox.Show(ex.Message, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnregresar_Click(object sender, EventArgs e)
+        {
+            FrmInicio frm = new FrmInicio();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

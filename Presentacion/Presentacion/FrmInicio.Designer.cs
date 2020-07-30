@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.btnsalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,11 +95,22 @@
     "NET\\Wave\\Wave.ssk";
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 
+            // btnsalir
+            // 
+            this.btnsalir.Location = new System.Drawing.Point(12, 329);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(46, 23);
+            this.btnsalir.TabIndex = 5;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 303);
+            this.ClientSize = new System.Drawing.Size(395, 364);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.Button btnsalir;
     }
 }

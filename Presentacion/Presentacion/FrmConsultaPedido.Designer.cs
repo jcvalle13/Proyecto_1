@@ -242,7 +242,6 @@
             this.estadoDataGridView.Name = "estadoDataGridView";
             this.estadoDataGridView.Size = new System.Drawing.Size(245, 220);
             this.estadoDataGridView.TabIndex = 6;
-           
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -262,7 +261,7 @@
             this.identificacionTextBox.Location = new System.Drawing.Point(130, 123);
             this.identificacionTextBox.Name = "identificacionTextBox";
             this.identificacionTextBox.Size = new System.Drawing.Size(100, 20);
-            this.identificacionTextBox.TabIndex = 8;
+            this.identificacionTextBox.TabIndex = 1;
             // 
             // btnbuscar
             // 

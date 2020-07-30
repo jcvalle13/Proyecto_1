@@ -45,6 +45,7 @@
             this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.regresarAlInicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +65,8 @@
             // sistemaToolStripMenuItem
             // 
             this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LogoffToolStripMenuItem});
+            this.LogoffToolStripMenuItem,
+            this.regresarAlInicioToolStripMenuItem});
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
             this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.sistemaToolStripMenuItem.Text = "Sistema";
@@ -72,7 +74,7 @@
             // LogoffToolStripMenuItem
             // 
             this.LogoffToolStripMenuItem.Name = "LogoffToolStripMenuItem";
-            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.LogoffToolStripMenuItem.Text = "Log off";
             this.LogoffToolStripMenuItem.Click += new System.EventHandler(this.LogoffToolStripMenuItem_Click);
             // 
@@ -174,6 +176,13 @@
     "NET\\Wave\\Wave.ssk";
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 
+            // regresarAlInicioToolStripMenuItem
+            // 
+            this.regresarAlInicioToolStripMenuItem.Name = "regresarAlInicioToolStripMenuItem";
+            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.regresarAlInicioToolStripMenuItem.Text = "Regresar al Inicio";
+            this.regresarAlInicioToolStripMenuItem.Click += new System.EventHandler(this.regresarAlInicioToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,5 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoPedidoToolStripMenuItem;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.ToolStripMenuItem regresarAlInicioToolStripMenuItem;
     }
 }

@@ -79,21 +79,21 @@
             this.cboestado.Location = new System.Drawing.Point(149, 70);
             this.cboestado.Name = "cboestado";
             this.cboestado.Size = new System.Drawing.Size(172, 21);
-            this.cboestado.TabIndex = 15;
+            this.cboestado.TabIndex = 3;
             // 
             // txtcontraseña
             // 
             this.txtcontraseña.Location = new System.Drawing.Point(149, 44);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(172, 20);
-            this.txtcontraseña.TabIndex = 14;
+            this.txtcontraseña.TabIndex = 2;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(149, 16);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(172, 20);
-            this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.TabIndex = 1;
             // 
             // label3
             // 

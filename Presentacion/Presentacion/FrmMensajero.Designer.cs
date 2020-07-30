@@ -65,21 +65,21 @@
             this.txtplaca.Location = new System.Drawing.Point(173, 140);
             this.txtplaca.Name = "txtplaca";
             this.txtplaca.Size = new System.Drawing.Size(179, 20);
-            this.txtplaca.TabIndex = 4;
+            this.txtplaca.TabIndex = 3;
             // 
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(173, 102);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(179, 20);
-            this.txtnombre.TabIndex = 5;
+            this.txtnombre.TabIndex = 2;
             // 
             // txttelefono
             // 
             this.txttelefono.Location = new System.Drawing.Point(173, 178);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(179, 20);
-            this.txttelefono.TabIndex = 6;
+            this.txttelefono.TabIndex = 4;
             // 
             // label5
             // 
@@ -147,7 +147,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(89, 41);
             this.btnatras.TabIndex = 14;
-            this.btnatras.Text = "Atrás";
+            this.btnatras.Text = "Menú";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
@@ -159,6 +159,7 @@
             this.btneliminar.TabIndex = 15;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // FrmMensajero
             // 
@@ -179,6 +180,7 @@
             this.Controls.Add(this.txtidentificacion);
             this.Controls.Add(this.label1);
             this.Name = "FrmMensajero";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingresar Mensajero";
             this.ResumeLayout(false);
             this.PerformLayout();

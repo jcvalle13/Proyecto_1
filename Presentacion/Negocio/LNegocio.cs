@@ -106,23 +106,24 @@ namespace Negocio
             }
         }
 
-        //revisar codigo, no elimina, solo sale msj
+        
          public static int EliminarUsuario(Usuarios P_usuario)
          {
 
-             try
-             {
-                 SQLParametros objpeticion = new SQLParametros();
-                 objpeticion.Peticion = @"DELETE FROM Usuarioss WHERE Usuario = '" + P_usuario.Usuario + "'";
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
 
-                 Acceso objacceso = new Acceso();
-                 return objacceso.Ejecutar_Peticiones(objpeticion);
-             }
-             catch (Exception ex)
-             {
-                 throw ex;
-             }
-         }
+                objpeticion.Peticion = @"DELETE FROM Usuarioss WHERE Usuario = '" + P_usuario.Usuario + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
             #endregion
 
 
@@ -455,7 +456,25 @@ namespace Negocio
             }
         }
 
-        public static List<Mensajero> Consultar_Mensajeros()
+        public static int EliminarMensajero(Mensajero m_Mensajero)
+        {
+
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"DELETE FROM Mensajero WHERE Identificacion = '" + m_Mensajero.Identificacion + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+            public static List<Mensajero> Consultar_Mensajeros()
         {
             try
             {

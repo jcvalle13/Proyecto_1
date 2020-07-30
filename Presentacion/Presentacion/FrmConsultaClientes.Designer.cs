@@ -40,7 +40,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(93, 47);
             this.btnatras.TabIndex = 0;
-            this.btnatras.Text = "Atrás";
+            this.btnatras.Text = "Menú";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -71,6 +71,7 @@
             this.Controls.Add(this.dgvclientes);
             this.Controls.Add(this.btnatras);
             this.Name = "FrmConsultaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Clientes y sus Pedidos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvclientes)).EndInit();
             this.ResumeLayout(false);

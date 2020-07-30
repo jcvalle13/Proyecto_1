@@ -117,5 +117,12 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        private void regresarAlInicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInicio frm = new FrmInicio();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

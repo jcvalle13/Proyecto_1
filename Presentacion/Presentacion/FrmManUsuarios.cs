@@ -152,29 +152,21 @@ namespace Presentacion
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
-                if (!EsError)
-                {
-                    if (!VerificarExistenciaCodigo())
-                    {
-                        MessageBox.Show("El código digitado no existe en base de datos, por favor cambiarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                Usuarios u = new Usuarios();
 
-                    Usuarios p = new Usuarios();
+                u.Usuario = txtUsuario.Text.Trim();
 
-                    p.Usuario = txtUsuario.Text.Trim();
+                LNegocio.EliminarUsuario(u);
+                MessageBox.Show("Usuario Eliminado");
+                limpiar();
 
-                    LNegocio.EliminarUsuario(p);
-                    MessageBox.Show("Usuario eliminado");
-                    limpiar();
-                   // CargarLista();
-                    txtUsuario.Focus();
-                }
+                txtUsuario.Focus();
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.Message);
             }
         }

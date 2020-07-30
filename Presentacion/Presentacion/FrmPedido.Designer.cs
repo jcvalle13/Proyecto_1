@@ -108,21 +108,21 @@
             this.txtdireccion.Location = new System.Drawing.Point(168, 232);
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(208, 20);
-            this.txtdireccion.TabIndex = 6;
+            this.txtdireccion.TabIndex = 4;
             // 
             // txtproducto
             // 
             this.txtproducto.Location = new System.Drawing.Point(168, 198);
             this.txtproducto.Name = "txtproducto";
             this.txtproducto.Size = new System.Drawing.Size(208, 20);
-            this.txtproducto.TabIndex = 7;
+            this.txtproducto.TabIndex = 3;
             // 
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(168, 165);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(208, 20);
-            this.txtnombre.TabIndex = 8;
+            this.txtnombre.TabIndex = 2;
             // 
             // label6
             // 
@@ -164,7 +164,7 @@
             this.cbomodopago.Location = new System.Drawing.Point(168, 307);
             this.cbomodopago.Name = "cbomodopago";
             this.cbomodopago.Size = new System.Drawing.Size(208, 21);
-            this.cbomodopago.TabIndex = 12;
+            this.cbomodopago.TabIndex = 6;
             // 
             // btnsiguiente
             // 
@@ -182,7 +182,7 @@
             this.txttelefono.Location = new System.Drawing.Point(168, 270);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(208, 20);
-            this.txttelefono.TabIndex = 15;
+            this.txttelefono.TabIndex = 5;
             // 
             // label8
             // 

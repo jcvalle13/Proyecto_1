@@ -46,6 +46,7 @@
             this.detallitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sublimaciónCreacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnatras = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,6 +203,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "¿Qué se le antoja?";
             // 
+            // btnatras
+            // 
+            this.btnatras.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnatras.Location = new System.Drawing.Point(659, 479);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(92, 28);
+            this.btnatras.TabIndex = 2;
+            this.btnatras.Text = "Ir al Inicio";
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,10 +221,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(763, 519);
+            this.Controls.Add(this.btnatras);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.Name = "FrmClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedidos de Clientes";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -240,5 +254,6 @@
         private System.Windows.Forms.ToolStripMenuItem detallitosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sublimaciónCreacionesToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnatras;
     }
 }
