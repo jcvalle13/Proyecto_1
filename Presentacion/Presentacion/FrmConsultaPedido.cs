@@ -9,19 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Negocio;
+using Presentacion.GlovoDataSetTableAdapters;
+
 
 namespace Presentacion
 {
     public partial class FrmConsultaPedido : Form
     {
-        //public List<ClientesPedidos> lstresultado { get; set; }
         public FrmConsultaPedido()
         {
-            //lstresultado = new List<ClientesPedidos>();
+            
             InitializeComponent();
-           // CargarConsultaPedido();
+   
+        }
 
-
+        private void limpiar()
+        {
+            identificacionTextBox.Text = string.Empty;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,42 +33,30 @@ namespace Presentacion
             this.Close();
         }
 
-       /* private void CargarConsultaPedido()
+        private void estadoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                lstresultado = new List<ClientesPedidos>();
+            
+            this.Validate();
+            this.estadoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.glovoDataSet);
+            
+        }
 
-                if (txtcedula.Text.Length == 0 || txtcedula.Text.Equals("0"))
-                    lstresultado = LNegocio.Consultar_Pedidos(new ClientesPedidos { Identificacion = 0 });
-                else
-                    lstresultado = LNegocio.Consultar_Pedidos(new ClientesPedidos { Identificacion = Convert.ToInt32(txtcedula.Text) });
-
-                dgvpedidos.DataSource = null;
-                dgvpedidos.Refresh();
-
-                dgvpedidos.DataSource = lstresultado;
-                dgvpedidos.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-        }*/
-
-
-        /*private void txtcedula_TextChanged(object sender, EventArgs e)
+        private void FrmConsultaPedido_Load(object sender, EventArgs e)
         {
-            try
-            {
-                CargarConsultaPedido();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }*/
+            // TODO: esta línea de código carga datos en la tabla 'glovoDataSet.Estado' Puede moverla o quitarla según sea necesario.
+            this.estadoTableAdapter.Fill(this.glovoDataSet.Estado);
+            limpiar();
+           
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            
+            this.estadoTableAdapter.BuscarPedido(this.glovoDataSet.Estado, Convert.ToInt32(identificacionTextBox.Text));
+            estadoDataGridView.Rows[0].Selected = false;
+        }
+
+        
     }
 }
