@@ -498,7 +498,85 @@ namespace Negocio
             }
         }
 
-        #endregion 
+        #endregion
 
+        #region Estado
+
+        public static int AgregarEstado(EstadoPedido e_Estado)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+
+                objpeticion.Peticion = @"INSERT INTO Estado VALUES ('" + e_Estado.Identificacion + "','" + e_Estado.Estado + "')";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static int ModificarEstado(EstadoPedido e_Estado)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"UPDATE Estado SET Estado = '" + e_Estado.Estado + "' WHERE Identificacion = '" + e_Estado.Identificacion + "'";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Ejecutar_Peticiones(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static List<EstadoPedido> Consultar_Estado()
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Estado FROM Estado";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Estado(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public static bool VerificarEstado(EstadoPedido e_Estado)
+        {
+            try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+                objpeticion.Peticion = @"SELECT Identificacion, Estado FROM Estado ";
+                objpeticion.Peticion += @"WHERE Identificacion = '" + e_Estado.Identificacion + "' AND ";
+                objpeticion.Peticion += @"Estado = '" + e_Estado.Estado + "'";
+               
+
+
+                Acceso objacceso = new Acceso();
+                List<EstadoPedido> lstresultados = objacceso.Consultar_Estado(objpeticion);
+
+                if (lstresultados.Count > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
     }
 }

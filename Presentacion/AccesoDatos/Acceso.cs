@@ -14,10 +14,10 @@ namespace AccesoDatos
     {
         #region Atributos
         //Configuracion string de conexion Joiner Proyecto1_Globo
-      private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
+      //private string strconexion = Properties.Settings.Default.Proyecto1_Globo;
         
         //Configuracion string de conexion a base de datos Steph Glovo
-       // private string strconexion = Properties.Settings.Default.Glovo;
+        private string strconexion = Properties.Settings.Default.Glovo;
         private SqlConnection objconexion;
         #endregion
 
@@ -346,6 +346,57 @@ namespace AccesoDatos
 
             return lstresultados;
         }
+
+        public List<EstadoPedido> Consultar_Estado(SQLParametros P_Peticion)
+        {
+            List<EstadoPedido> lstresultados = new List<EstadoPedido>();
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = objconexion; //Identifica la conexion a la BD
+                cmd.CommandType = System.Data.CommandType.Text; //Se especifica el tipo de formato de sentencia a ejecutar
+                cmd.CommandText = P_Peticion.Peticion; //Aqui se asigna la peticion construida
+
+                if (P_Peticion.LstParametros.Count > 0)  //Validar si tiene parametros, y agregarlos
+                    cmd.Parameters.AddRange(P_Peticion.LstParametros.ToArray());
+
+
+                SqlDataAdapter objconsultapedido = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                objconsultapedido.Fill(dt);
+
+                if (dt.Rows.Count > 0) //Verifica si la consulta devolvio registros
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        EstadoPedido e = new EstadoPedido();
+
+                        //Aqui se obtiene los valores de celda o columna por fila leida
+                        e.Identificacion = Convert.ToInt32(fila.ItemArray[0].ToString());
+                        e.Estado = fila.ItemArray[1].ToString();
+                       
+
+
+                        lstresultados.Add(e);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRARCONEXION();
+            }
+
+            return lstresultados;
+        }
+
 
         #endregion
 

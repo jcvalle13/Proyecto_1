@@ -43,14 +43,16 @@
             this.pbcarga2 = new System.Windows.Forms.ProgressBar();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.cboestado = new System.Windows.Forms.ComboBox();
+            this.pbcarga3 = new System.Windows.Forms.ProgressBar();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvestado)).BeginInit();
             this.SuspendLayout();
             // 
             // pbcarga
             // 
-            this.pbcarga.Location = new System.Drawing.Point(74, 303);
+            this.pbcarga.Location = new System.Drawing.Point(96, 303);
             this.pbcarga.Name = "pbcarga";
-            this.pbcarga.Size = new System.Drawing.Size(211, 32);
+            this.pbcarga.Size = new System.Drawing.Size(201, 32);
             this.pbcarga.TabIndex = 0;
             // 
             // label1
@@ -114,7 +116,7 @@
             // 
             // btndecamino
             // 
-            this.btndecamino.Location = new System.Drawing.Point(242, 373);
+            this.btndecamino.Location = new System.Drawing.Point(246, 373);
             this.btndecamino.Name = "btndecamino";
             this.btndecamino.Size = new System.Drawing.Size(96, 36);
             this.btndecamino.TabIndex = 12;
@@ -144,9 +146,9 @@
             // 
             // pbcarga2
             // 
-            this.pbcarga2.Location = new System.Drawing.Point(282, 303);
+            this.pbcarga2.Location = new System.Drawing.Point(296, 303);
             this.pbcarga2.Name = "pbcarga2";
-            this.pbcarga2.Size = new System.Drawing.Size(230, 32);
+            this.pbcarga2.Size = new System.Drawing.Size(188, 32);
             this.pbcarga2.TabIndex = 15;
             // 
             // timer2
@@ -165,11 +167,23 @@
             this.cboestado.Size = new System.Drawing.Size(217, 21);
             this.cboestado.TabIndex = 16;
             // 
+            // pbcarga3
+            // 
+            this.pbcarga3.Location = new System.Drawing.Point(70, 303);
+            this.pbcarga3.Name = "pbcarga3";
+            this.pbcarga3.Size = new System.Drawing.Size(28, 32);
+            this.pbcarga3.TabIndex = 17;
+            // 
+            // timer3
+            // 
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
             // FrmEstadoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 426);
+            this.Controls.Add(this.pbcarga3);
             this.Controls.Add(this.cboestado);
             this.Controls.Add(this.pbcarga2);
             this.Controls.Add(this.btnenrestaurante);
@@ -206,5 +220,7 @@
         private System.Windows.Forms.ProgressBar pbcarga2;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ComboBox cboestado;
+        private System.Windows.Forms.ProgressBar pbcarga3;
+        private System.Windows.Forms.Timer timer3;
     }
 }

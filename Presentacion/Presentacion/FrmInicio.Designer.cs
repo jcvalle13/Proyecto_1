@@ -90,7 +90,7 @@
             // skinEngine1
             // 
             this.skinEngine1.SerialNumber = "";
-            this.skinEngine1.SkinFile = "C:\\Users\\jcval\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
+            this.skinEngine1.SkinFile = "C:\\Users\\Steph\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
     "NET\\Wave\\Wave.ssk";
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 

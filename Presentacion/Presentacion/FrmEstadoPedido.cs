@@ -63,27 +63,30 @@ namespace Presentacion
             {
                 if (!EsError)
                 {
-                    ClientesPedidos m = new ClientesPedidos();
+                    if (VerificarExistenciaCodigo())
+                    {
+                        MessageBox.Show("El código digitado ya existe en base de datos, por favor cambiarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
-                    m.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
-                   /* m.Nombre = txtnombre.Text.Trim();
-                    m.Producto = txtproducto.Text.Trim();
-                    m.Direccion = txtdireccion.Text.Trim();
-                    m.Telefono = Convert.ToInt32(txttelefono.Text.Trim());
-                    m.Modo_Pago = cbomodopago.Text.Trim();*/
-                    m.Estado = cboestado.Text.Trim();
+                    EstadoPedido ep = new EstadoPedido();
+
+                    ep.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
+                    ep.Estado = cboestado.Text.Trim();
+                   
+
+                    Negocio.LNegocio.AgregarEstado(ep);
+                    MessageBox.Show("Iniciando Pedido", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    Negocio.LNegocio.ModificarPedidos(m);
-                    MessageBox.Show("Iniciando pedido", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                   
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+            timer3.Start();
 
         }
 
@@ -93,13 +96,13 @@ namespace Presentacion
             {
                 if (!EsError)
                 {
-                    ClientesPedidos m = new ClientesPedidos();
+                    EstadoPedido ep = new EstadoPedido();
 
-                    m.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
-                    m.Estado = cboestado.Text.Trim();
+                    ep.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
+                    ep.Estado = cboestado.Text.Trim();
 
 
-                    Negocio.LNegocio.ModificarPedidos(m);
+                    Negocio.LNegocio.ModificarEstado(ep);
                     MessageBox.Show("Camino a la Entrega", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                   
                 }
@@ -109,7 +112,7 @@ namespace Presentacion
                 MessageBox.Show(ex.Message);
             }
             timer1.Start();
-          //  MessageBox.Show("Camino a la Entrega", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          
         }
 
         private void btnentregado_Click(object sender, EventArgs e)
@@ -118,13 +121,13 @@ namespace Presentacion
             {
                 if (!EsError)
                 {
-                    ClientesPedidos m = new ClientesPedidos();
+                    EstadoPedido ep = new EstadoPedido();
 
-                    m.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
-                    m.Estado = cboestado.Text.Trim();
+                    ep.Identificacion = Convert.ToInt32(txtidentificacion.Text.Trim());
+                    ep.Estado = cboestado.Text.Trim();
 
 
-                    Negocio.LNegocio.ModificarPedidos(m);
+                    Negocio.LNegocio.ModificarEstado(ep);
                     MessageBox.Show("Pedido Entregado", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -156,6 +159,11 @@ namespace Presentacion
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            pbcarga3.Increment(10);
         }
     }
 }
