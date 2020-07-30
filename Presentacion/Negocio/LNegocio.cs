@@ -319,7 +319,7 @@ namespace Negocio
             {
                 SQLParametros objpeticion = new SQLParametros();
 
-                objpeticion.Peticion = @"INSERT INTO Pedidos VALUES ('" + P_Pedidos.Identificacion + "','" + P_Pedidos.Nombre + "','" + P_Pedidos.Producto + "','" + P_Pedidos.Direccion + "','" + P_Pedidos.Telefono + "','" + P_Pedidos.Modo_Pago + "','" + P_Pedidos.Estado + "')";
+                objpeticion.Peticion = @"INSERT INTO Pedidos VALUES ('" + P_Pedidos.Identificacion + "','" + P_Pedidos.Nombre + "','" + P_Pedidos.Producto + "','" + P_Pedidos.Direccion + "','" + P_Pedidos.Telefono + "','" + P_Pedidos.Modo_Pago  + "')";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -335,7 +335,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"UPDATE Pedidos SET Nombre = '" + m_Pedidos.Nombre + "', Producto = '" + m_Pedidos.Producto + "', Direccion = '" + m_Pedidos.Direccion + "', Telefono = '" + m_Pedidos.Telefono + "', Modo_Pago = '" + m_Pedidos.Modo_Pago + "', Estado = '" + m_Pedidos.Estado + "' WHERE Identificacion = '" + m_Pedidos.Identificacion + "'";
+                objpeticion.Peticion = @"UPDATE Pedidos SET Nombre = '" + m_Pedidos.Nombre + "', Producto = '" + m_Pedidos.Producto + "', Direccion = '" + m_Pedidos.Direccion + "', Telefono = '" + m_Pedidos.Telefono + "', Modo_Pago = '" + m_Pedidos.Modo_Pago + "' WHERE Identificacion = '" + m_Pedidos.Identificacion + "'";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Ejecutar_Peticiones(objpeticion);
@@ -401,7 +401,7 @@ namespace Negocio
                 objpeticion.Peticion += @"Direccion = '" + P_Pedidos.Direccion + "'";
                 objpeticion.Peticion += @"Telefono = '" + P_Pedidos.Telefono + "'";
                 objpeticion.Peticion += @"Modo_Pago = '" + P_Pedidos.Modo_Pago + "'";
-                objpeticion.Peticion += @"Estado = '" + P_Pedidos.Estado + "'";
+               // objpeticion.Peticion += @"Estado = '" + P_Pedidos.Estado + "'";
 
                 Acceso objacceso = new Acceso();
                 List<ClientesPedidos> lstresultados = objacceso.Consultar_Pedidos(objpeticion);

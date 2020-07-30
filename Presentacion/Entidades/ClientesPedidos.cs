@@ -16,7 +16,7 @@ namespace Entidades
         public int Telefono { get; set; }
         public string Modo_Pago { get; set; }
 
-        public string Estado { get; set; }
+        //public string Estado { get; set; }
 
         //public bool Modo_Pago { get; set;}
         public ClientesPedidos()
@@ -28,7 +28,7 @@ namespace Entidades
             Direccion = string.Empty;
             Telefono = 0;
             Modo_Pago = string.Empty;
-            Estado = string.Empty;
+          //  Estado = string.Empty;
 
             //Modo_Pago = false;
         }

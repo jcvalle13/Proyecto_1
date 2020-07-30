@@ -30,7 +30,9 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            MessageBox.Show("Gracias por preferirnos!", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
         }
 
         private void estadoBindingNavigatorSaveItem_Click(object sender, EventArgs e)

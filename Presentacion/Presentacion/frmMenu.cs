@@ -27,7 +27,12 @@ namespace Presentacion
             //botones
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
+
+            //*************************************************
+            //pedidos tiene q quitarlo xq esta afuera
             pedidosToolStripMenuItem.Visible = false;
+            //***************************************************
+
             mensajeroToolStripMenuItem.Visible = false;
 
             foreach (Usuarios item in lstusuarios)
@@ -36,7 +41,12 @@ namespace Presentacion
                 {
                     case 1: { mantenimientosToolStripMenuItem.Visible = true; } break;
                     case 2: { consultasToolStripMenuItem.Visible = true; } break;
+
+                        //**************************************************************
+                        //igual aca, quitarlo
                     case 3: { pedidosToolStripMenuItem.Visible = true; } break;
+                        //***************************************************************
+
                     case 4: { mensajeroToolStripMenuItem.Visible = true; } break;
                     case 5: { } break;
                 }
