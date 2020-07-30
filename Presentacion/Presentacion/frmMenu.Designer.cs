@@ -165,6 +165,7 @@
             this.estadoPedidoToolStripMenuItem.Name = "estadoPedidoToolStripMenuItem";
             this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
+            this.estadoPedidoToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidoToolStripMenuItem_Click);
             // 
             // skinEngine1
             // 

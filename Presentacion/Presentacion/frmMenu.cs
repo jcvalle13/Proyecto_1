@@ -100,5 +100,12 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+        private void estadoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstadoPedido frm = new FrmEstadoPedido();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
