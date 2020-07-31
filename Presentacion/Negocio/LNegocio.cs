@@ -349,31 +349,6 @@ namespace Negocio
 
        public static List<ClientesPedidos> Consultar_Pedidos()
         {
-
-            /*try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"EXEC PA_ConsultaPedidos @Identificacion";
-
-                //Crear los parametros
-                SqlParameter parametroCodigo = new SqlParameter();
-                parametroCodigo.ParameterName = "@Identificacion";
-                parametroCodigo.SqlDbType = System.Data.SqlDbType.Int;
-                parametroCodigo.Value = C_Pedidos.Identificacion;
-
-                //Agrega a la lista de parametros los parametros creados
-                objpeticion.LstParametros.Add(parametroCodigo);
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Consultar_Pedidos(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }*/
-
-
-
              try
             {
                 SQLParametros objpeticion = new SQLParametros();
@@ -402,7 +377,7 @@ namespace Negocio
                 objpeticion.Peticion += @"Direccion = '" + P_Pedidos.Direccion + "'";
                 objpeticion.Peticion += @"Telefono = '" + P_Pedidos.Telefono + "'";
                 objpeticion.Peticion += @"Modo_Pago = '" + P_Pedidos.Modo_Pago + "'";
-               // objpeticion.Peticion += @"Estado = '" + P_Pedidos.Estado + "'";
+              
 
                 Acceso objacceso = new Acceso();
                 List<ClientesPedidos> lstresultados = objacceso.Consultar_Pedidos(objpeticion);

@@ -278,7 +278,7 @@ namespace AccesoDatos
                         p.Direccion = fila.ItemArray[3].ToString();
                         p.Telefono = Convert.ToInt32(fila.ItemArray[4].ToString());
                         p.Modo_Pago = fila.ItemArray[5].ToString();
-                       // p.Estado = fila.ItemArray[6].ToString();
+                      
 
                         lstresultados.Add(p);
                     }
