@@ -61,23 +61,24 @@ namespace Presentacion
         private void perfilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmManPerfiles frm = new FrmManPerfiles();
-            frm.MdiParent = this;
+            //frm.MdiParent = this;
             frm.Show();
+            this.Hide();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmManUsuarios frm = new FrmManUsuarios();
-            frm.MdiParent = this;
             frm.Show();
+            this.Hide();
         }
 
    
         private void mensajeroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmMensajero frm = new FrmMensajero();
-            frm.MdiParent = this;
             frm.Show();
+            this.Hide();
         }
 
       

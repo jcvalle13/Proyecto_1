@@ -50,15 +50,16 @@ namespace Presentacion
 
                    frmMenu frm = new frmMenu();
                    //frm.Usuario = txtUsuario.Text.Trim();//Nuevo
-                   //frm.CargarOpcionesUsuario();//NUEVO
+                  // frm.CargarOpcionesUsuario();//NUEVO
                    frm.Show();
                     this.Hide();
                 }
 
-                else if (contador > 2)
+                else if (contador > 1)
                 {
                     MessageBox.Show("Los intentos máximos (3) han sido alcanzados", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Application.Exit();
+                    
                 }
 
                 else

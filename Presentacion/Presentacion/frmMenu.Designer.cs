@@ -39,7 +39,6 @@
             this.motorizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoHistóricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCantidadDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,21 +96,21 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
             // motorizadoToolStripMenuItem
             // 
             this.motorizadoToolStripMenuItem.Name = "motorizadoToolStripMenuItem";
-            this.motorizadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motorizadoToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.motorizadoToolStripMenuItem.Text = "Motorizado";
             this.motorizadoToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
             // 
@@ -119,7 +118,6 @@
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listadoDeUsuariosToolStripMenuItem,
-            this.listadoHistóricoToolStripMenuItem,
             this.listadoDePaquetesToolStripMenuItem,
             this.listadoCantidadDePaquetesToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
@@ -132,12 +130,6 @@
             this.listadoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.listadoDeUsuariosToolStripMenuItem.Text = "Listado de Usuarios";
             this.listadoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeUsuariosToolStripMenuItem_Click);
-            // 
-            // listadoHistóricoToolStripMenuItem
-            // 
-            this.listadoHistóricoToolStripMenuItem.Name = "listadoHistóricoToolStripMenuItem";
-            this.listadoHistóricoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.listadoHistóricoToolStripMenuItem.Text = "Listado de Perfiles";
             // 
             // listadoDePaquetesToolStripMenuItem
             // 
@@ -164,7 +156,7 @@
             // estadoPedidoToolStripMenuItem
             // 
             this.estadoPedidoToolStripMenuItem.Name = "estadoPedidoToolStripMenuItem";
-            this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
             this.estadoPedidoToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidoToolStripMenuItem_Click);
             // 
@@ -204,7 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem perfilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeUsuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listadoHistóricoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoCantidadDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;

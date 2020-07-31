@@ -331,28 +331,13 @@ namespace Negocio
             }
         }
 
-        public static int ModificarPedidos(ClientesPedidos m_Pedidos)
-        {
-            try
-            {
-                SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"UPDATE Pedidos SET Nombre = '" + m_Pedidos.Nombre + "', Producto = '" + m_Pedidos.Producto + "', Direccion = '" + m_Pedidos.Direccion + "', Telefono = '" + m_Pedidos.Telefono + "', Modo_Pago = '" + m_Pedidos.Modo_Pago + "' WHERE Identificacion = '" + m_Pedidos.Identificacion + "'";
-
-                Acceso objacceso = new Acceso();
-                return objacceso.Ejecutar_Peticiones(objpeticion);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
        public static List<ClientesPedidos> Consultar_Pedidos()
         {
              try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Telefono, Modo_Pago, Estado FROM Pedidos";
+                objpeticion.Peticion = @"SELECT Identificacion, Nombre, Producto, Direccion, Telefono, Modo_Pago FROM Pedidos";
 
                 Acceso objacceso = new Acceso();
                
