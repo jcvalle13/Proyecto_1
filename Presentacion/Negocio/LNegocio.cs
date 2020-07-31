@@ -95,7 +95,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-               objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
+                objpeticion.Peticion = @"EXEC PA_ObtenerPerfilesPorUsuario '" + P_usuario.Usuario + "'";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Permisos_Usuarios(objpeticion);
@@ -104,6 +104,20 @@ namespace Negocio
             {
                 throw ex;
             }
+
+
+            /*try
+            {
+                SQLParametros objpeticion = new SQLParametros();
+               objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
+
+                Acceso objacceso = new Acceso();
+                return objacceso.Consultar_Permisos_Usuarios(objpeticion);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }*/
         }
 
     

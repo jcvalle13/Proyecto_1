@@ -49,10 +49,10 @@ namespace Presentacion
                    MessageBox.Show("USUARIO CORRECTO", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                    frmMenu frm = new frmMenu();
-                   //frm.Usuario = txtUsuario.Text.Trim();//Nuevo
-                   //frm.CargarOpcionesUsuario();//NUEVO
+                   frm.Usuario = txtUsuario.Text.Trim();//Nuevo
+                   frm.CargarOpcionesUsuario();//NUEVO
                    frm.Show();
-                    this.Hide();
+                   this.Hide();
                 }
 
                 else if (contador > 2)

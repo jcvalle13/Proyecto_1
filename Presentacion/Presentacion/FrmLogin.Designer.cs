@@ -107,8 +107,9 @@
             // 
             // skinEngine1
             // 
-            this.skinEngine1.SerialNumber = "";
-            this.skinEngine1.SkinFile = null;
+            this.skinEngine1.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
+            this.skinEngine1.SkinFile = "C:\\Users\\jcval\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
+    "NET\\Wave\\Wave.ssk";
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 
             // btnregresar
