@@ -43,15 +43,15 @@ namespace Presentacion
                 objusuario.Contraseña = txtClave.Text.Trim();
                 objusuario.Estado = true;
 
-
-
                 if (LNegocio.VerificarUsuario(objusuario))
 
                 {
-                    MessageBox.Show("USUARIO CORRECTO", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   MessageBox.Show("USUARIO CORRECTO", "Autenticación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    frmMenu frm = new frmMenu();
-                    frm.Show();
+                   frmMenu frm = new frmMenu();
+                   //frm.Usuario = txtUsuario.Text.Trim();//Nuevo
+                   //frm.CargarOpcionesUsuario();//NUEVO
+                   frm.Show();
                     this.Hide();
                 }
 
@@ -62,13 +62,10 @@ namespace Presentacion
                 }
 
                 else
-                    MessageBox.Show("Usuario Incorrecto");
+                MessageBox.Show("Usuario Incorrecto");
                 txtUsuario.Text = "";
                 txtClave.Text = "";
                 contador += 1;
-
-
-
 
             }
             catch (Exception ex)

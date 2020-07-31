@@ -64,6 +64,7 @@
             // txtClave
             // 
             this.txtClave.Location = new System.Drawing.Point(172, 64);
+            this.txtClave.MaxLength = 15;
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(112, 20);
@@ -107,8 +108,7 @@
             // skinEngine1
             // 
             this.skinEngine1.SerialNumber = "";
-            this.skinEngine1.SkinFile = "C:\\Users\\Steph\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
-    "NET\\Wave\\Wave.ssk";
+            this.skinEngine1.SkinFile = null;
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
             // 
             // btnregresar

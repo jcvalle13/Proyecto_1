@@ -23,32 +23,26 @@ namespace Presentacion
             Usuarios u = new Usuarios();
             u.Usuario = Usuario;
 
-            List<Usuarios> lstusuarios = LNegocio.Consultar_Permisos_Usuarios(u);
+            List<Usuarios> lstusuarios = LNegocio.Consultar_Permisos_Usuarios(u);// se trae la consulta de los permisos
+
             //botones
+     
             mantenimientosToolStripMenuItem.Visible = false;
             consultasToolStripMenuItem.Visible = false;
-
-            //*************************************************
-            //pedidos tiene q quitarlo xq esta afuera
-            pedidosToolStripMenuItem.Visible = false;
-            //***************************************************
-
             mensajeroToolStripMenuItem.Visible = false;
+           
+           
 
             foreach (Usuarios item in lstusuarios)
             {
                 switch (item.Perfiles.cod_perfil)
                 {
-                    case 1: { mantenimientosToolStripMenuItem.Visible = true; } break;
-                    case 2: { consultasToolStripMenuItem.Visible = true; } break;
-
-                        //**************************************************************
-                        //igual aca, quitarlo
-                    case 3: { pedidosToolStripMenuItem.Visible = true; } break;
-                        //***************************************************************
-
-                    case 4: { mensajeroToolStripMenuItem.Visible = true; } break;
+                    case 1: { mantenimientosToolStripMenuItem.Visible = true;} break;
+                    case 2: {consultasToolStripMenuItem.Visible = true;} break;
+                    case 3: { mensajeroToolStripMenuItem.Visible = true; } break;
+                    case 4: { } break;
                     case 5: { } break;
+                    
                 }
             }
         }
@@ -124,5 +118,7 @@ namespace Presentacion
             frm.Show();
             this.Hide();
         }
+
+    
     }
 }

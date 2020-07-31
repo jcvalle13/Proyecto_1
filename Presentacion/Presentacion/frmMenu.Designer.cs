@@ -32,20 +32,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogoffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.regresarAlInicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motorizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoHistóricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCantidadDePaquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoPedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mensajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
-            this.regresarAlInicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +54,7 @@
             this.sistemaToolStripMenuItem,
             this.mantenimientosToolStripMenuItem,
             this.consultasToolStripMenuItem,
-            this.pedidosToolStripMenuItem});
+            this.mensajeroToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -74,16 +73,23 @@
             // LogoffToolStripMenuItem
             // 
             this.LogoffToolStripMenuItem.Name = "LogoffToolStripMenuItem";
-            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LogoffToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.LogoffToolStripMenuItem.Text = "Log off";
             this.LogoffToolStripMenuItem.Click += new System.EventHandler(this.LogoffToolStripMenuItem_Click);
+            // 
+            // regresarAlInicioToolStripMenuItem
+            // 
+            this.regresarAlInicioToolStripMenuItem.Name = "regresarAlInicioToolStripMenuItem";
+            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.regresarAlInicioToolStripMenuItem.Text = "Regresar al Inicio";
+            this.regresarAlInicioToolStripMenuItem.Click += new System.EventHandler(this.regresarAlInicioToolStripMenuItem_Click);
             // 
             // mantenimientosToolStripMenuItem
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.perfilesToolStripMenuItem,
-            this.mensajeroToolStripMenuItem});
+            this.motorizadoToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -91,23 +97,23 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // perfilesToolStripMenuItem
             // 
             this.perfilesToolStripMenuItem.Name = "perfilesToolStripMenuItem";
-            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.perfilesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.perfilesToolStripMenuItem.Text = "Perfiles";
             this.perfilesToolStripMenuItem.Click += new System.EventHandler(this.perfilesToolStripMenuItem_Click);
             // 
-            // mensajeroToolStripMenuItem
+            // motorizadoToolStripMenuItem
             // 
-            this.mensajeroToolStripMenuItem.Name = "mensajeroToolStripMenuItem";
-            this.mensajeroToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.mensajeroToolStripMenuItem.Text = "Mensajero";
-            this.mensajeroToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
+            this.motorizadoToolStripMenuItem.Name = "motorizadoToolStripMenuItem";
+            this.motorizadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motorizadoToolStripMenuItem.Text = "Motorizado";
+            this.motorizadoToolStripMenuItem.Click += new System.EventHandler(this.mensajeroToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
@@ -147,41 +153,26 @@
             this.listadoCantidadDePaquetesToolStripMenuItem.Text = "Listado de Clientes";
             this.listadoCantidadDePaquetesToolStripMenuItem.Click += new System.EventHandler(this.listadoCantidadDePaquetesToolStripMenuItem_Click);
             // 
-            // pedidosToolStripMenuItem
+            // mensajeroToolStripMenuItem
             // 
-            this.pedidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.estadoPedidosToolStripMenuItem,
+            this.mensajeroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estadoPedidoToolStripMenuItem});
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
-            // 
-            // estadoPedidosToolStripMenuItem
-            // 
-            this.estadoPedidosToolStripMenuItem.Name = "estadoPedidosToolStripMenuItem";
-            this.estadoPedidosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.estadoPedidosToolStripMenuItem.Text = "Consulta de pedidos";
+            this.mensajeroToolStripMenuItem.Name = "mensajeroToolStripMenuItem";
+            this.mensajeroToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.mensajeroToolStripMenuItem.Text = "Mensajero";
             // 
             // estadoPedidoToolStripMenuItem
             // 
             this.estadoPedidoToolStripMenuItem.Name = "estadoPedidoToolStripMenuItem";
-            this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.estadoPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.estadoPedidoToolStripMenuItem.Text = "Estado Pedido";
             this.estadoPedidoToolStripMenuItem.Click += new System.EventHandler(this.estadoPedidoToolStripMenuItem_Click);
             // 
             // skinEngine1
             // 
             this.skinEngine1.SerialNumber = "U4N2UjLguUZs33UR+Vy47JAZ81t2fjIFvut28vc5oHiVeivGb/NZMA==";
-            this.skinEngine1.SkinFile = "C:\\Users\\Steph\\source\\repos\\Proyecto_1\\Presentacion\\Presentacion\\Recursos\\SkinVS." +
-    "NET\\Wave\\Wave.ssk";
+            this.skinEngine1.SkinFile = null;
             this.skinEngine1.SkinStreamMain = ((System.IO.Stream)(resources.GetObject("skinEngine1.SkinStreamMain")));
-            // 
-            // regresarAlInicioToolStripMenuItem
-            // 
-            this.regresarAlInicioToolStripMenuItem.Name = "regresarAlInicioToolStripMenuItem";
-            this.regresarAlInicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.regresarAlInicioToolStripMenuItem.Text = "Regresar al Inicio";
-            this.regresarAlInicioToolStripMenuItem.Click += new System.EventHandler(this.regresarAlInicioToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -216,9 +207,8 @@
         private System.Windows.Forms.ToolStripMenuItem listadoHistóricoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDePaquetesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoCantidadDePaquetesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem estadoPedidosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mensajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motorizadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadoPedidoToolStripMenuItem;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
         private System.Windows.Forms.ToolStripMenuItem regresarAlInicioToolStripMenuItem;

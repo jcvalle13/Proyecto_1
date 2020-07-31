@@ -95,7 +95,7 @@ namespace Negocio
             try
             {
                 SQLParametros objpeticion = new SQLParametros();
-                objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
+               objpeticion.Peticion = @"SELECT Usuario, Contraseña, Estado FROM Usuarioss";
 
                 Acceso objacceso = new Acceso();
                 return objacceso.Consultar_Permisos_Usuarios(objpeticion);
@@ -106,8 +106,8 @@ namespace Negocio
             }
         }
 
-        
-         public static int EliminarUsuario(Usuarios P_usuario)
+    
+        public static int EliminarUsuario(Usuarios P_usuario)
          {
 
             try

@@ -12,7 +12,7 @@ namespace Entidades
         public string Contraseña { get; set; }
         public bool Estado { get; set; }
         public Perfiles Perfiles { get; set; }//Aqui se agrega la propiedad para conservar la lista de perfiles asociados a un usuario
-
+       
 
         public Usuarios()
         {
@@ -20,8 +20,8 @@ namespace Entidades
             Contraseña = string.Empty;
             Estado = false;
 
-            Perfiles = new Perfiles();
-
+           Perfiles = new Perfiles();
+           
 
 
         }
