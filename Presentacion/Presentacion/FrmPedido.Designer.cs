@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.label1 = new System.Windows.Forms.Label();
             this.txtidentificacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,9 +140,9 @@
             // btnpedir
             // 
             this.btnpedir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpedir.Location = new System.Drawing.Point(57, 358);
+            this.btnpedir.Location = new System.Drawing.Point(303, 363);
             this.btnpedir.Name = "btnpedir";
-            this.btnpedir.Size = new System.Drawing.Size(118, 45);
+            this.btnpedir.Size = new System.Drawing.Size(73, 45);
             this.btnpedir.TabIndex = 10;
             this.btnpedir.Text = "Pedir";
             this.btnpedir.UseVisualStyleBackColor = true;
@@ -169,9 +172,9 @@
             // btnsiguiente
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsiguiente.Location = new System.Drawing.Point(258, 358);
+            this.btnsiguiente.Location = new System.Drawing.Point(303, 429);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(118, 45);
+            this.btnsiguiente.Size = new System.Drawing.Size(73, 45);
             this.btnsiguiente.TabIndex = 13;
             this.btnsiguiente.Text = ">>>";
             this.btnsiguiente.UseVisualStyleBackColor = true;
@@ -194,11 +197,21 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Teléfono:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(168, 350);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 134);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 419);
+            this.ClientSize = new System.Drawing.Size(487, 496);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsiguiente);
@@ -218,6 +231,7 @@
             this.Name = "FrmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formalización de Pedido";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +255,6 @@
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmManUsuarios));
             this.btnmenu = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
@@ -38,12 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnmenu
             // 
             this.btnmenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmenu.Location = new System.Drawing.Point(364, 9);
+            this.btnmenu.Location = new System.Drawing.Point(411, 11);
             this.btnmenu.Name = "btnmenu";
             this.btnmenu.Size = new System.Drawing.Size(100, 44);
             this.btnmenu.TabIndex = 19;
@@ -54,9 +57,9 @@
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(118, 116);
+            this.btnmodificar.Location = new System.Drawing.Point(184, 94);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(100, 44);
+            this.btnmodificar.Size = new System.Drawing.Size(81, 44);
             this.btnmodificar.TabIndex = 17;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
@@ -65,9 +68,9 @@
             // btnagregar
             // 
             this.btnagregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnagregar.Location = new System.Drawing.Point(12, 116);
+            this.btnagregar.Location = new System.Drawing.Point(95, 94);
             this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(100, 44);
+            this.btnagregar.Size = new System.Drawing.Size(83, 44);
             this.btnagregar.TabIndex = 16;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -76,30 +79,30 @@
             // cboestado
             // 
             this.cboestado.FormattingEnabled = true;
-            this.cboestado.Location = new System.Drawing.Point(149, 70);
+            this.cboestado.Location = new System.Drawing.Point(221, 67);
             this.cboestado.Name = "cboestado";
-            this.cboestado.Size = new System.Drawing.Size(172, 21);
+            this.cboestado.Size = new System.Drawing.Size(150, 21);
             this.cboestado.TabIndex = 3;
             // 
             // txtcontraseña
             // 
-            this.txtcontraseña.Location = new System.Drawing.Point(149, 44);
+            this.txtcontraseña.Location = new System.Drawing.Point(221, 41);
             this.txtcontraseña.Name = "txtcontraseña";
-            this.txtcontraseña.Size = new System.Drawing.Size(172, 20);
+            this.txtcontraseña.Size = new System.Drawing.Size(150, 20);
             this.txtcontraseña.TabIndex = 2;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(149, 16);
+            this.txtUsuario.Location = new System.Drawing.Point(221, 13);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(172, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(150, 20);
             this.txtUsuario.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 69);
+            this.label3.Location = new System.Drawing.Point(91, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 12;
@@ -109,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 43);
+            this.label2.Location = new System.Drawing.Point(91, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 11;
@@ -119,7 +122,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Location = new System.Drawing.Point(91, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 10;
@@ -128,7 +131,7 @@
             // btneliminar
             // 
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.Location = new System.Drawing.Point(224, 116);
+            this.btneliminar.Location = new System.Drawing.Point(271, 94);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(100, 44);
             this.btneliminar.TabIndex = 20;
@@ -136,11 +139,21 @@
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 67);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmManUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 174);
+            this.ClientSize = new System.Drawing.Size(521, 159);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmenu);
             this.Controls.Add(this.btnmodificar);
@@ -156,6 +169,7 @@
             this.Name = "FrmManUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmManUsuarios";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

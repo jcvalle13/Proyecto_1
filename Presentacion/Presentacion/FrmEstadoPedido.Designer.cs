@@ -58,16 +58,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 23);
+            this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Estado del Pedido";
             // 
             // txtidentificacion
             // 
-            this.txtidentificacion.Location = new System.Drawing.Point(314, 207);
+            this.txtidentificacion.Location = new System.Drawing.Point(347, 203);
             this.txtidentificacion.Name = "txtidentificacion";
             this.txtidentificacion.Size = new System.Drawing.Size(217, 20);
             this.txtidentificacion.TabIndex = 1;
@@ -83,10 +83,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(286, 23);
+            this.label2.Size = new System.Drawing.Size(329, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ingrese el número de cédula del cliente:";
             // 
@@ -162,7 +162,7 @@
             "Iniciando",
             "De Camino",
             "Entregado"});
-            this.cboestado.Location = new System.Drawing.Point(314, 233);
+            this.cboestado.Location = new System.Drawing.Point(347, 229);
             this.cboestado.Name = "cboestado";
             this.cboestado.Size = new System.Drawing.Size(217, 21);
             this.cboestado.TabIndex = 2;
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 426);
+            this.ClientSize = new System.Drawing.Size(588, 426);
             this.Controls.Add(this.pbcarga3);
             this.Controls.Add(this.cboestado);
             this.Controls.Add(this.pbcarga2);

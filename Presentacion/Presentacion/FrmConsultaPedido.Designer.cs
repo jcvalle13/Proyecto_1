@@ -56,21 +56,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.estadoTableAdapter = new Presentacion.GlovoDataSetTableAdapters.EstadoTableAdapter();
             this.tableAdapterManager = new Presentacion.GlovoDataSetTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             identificacionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingNavigator)).BeginInit();
             this.estadoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glovoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // identificacionLabel
             // 
             identificacionLabel.AutoSize = true;
-            identificacionLabel.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            identificacionLabel.Location = new System.Drawing.Point(13, 119);
+            identificacionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            identificacionLabel.Location = new System.Drawing.Point(28, 123);
             identificacionLabel.Name = "identificacionLabel";
-            identificacionLabel.Size = new System.Drawing.Size(111, 23);
+            identificacionLabel.Size = new System.Drawing.Size(122, 20);
             identificacionLabel.TabIndex = 7;
             identificacionLabel.Text = "Identificacion:";
             // 
@@ -78,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Location = new System.Drawing.Point(12, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(371, 25);
             this.label2.TabIndex = 3;
@@ -86,8 +88,8 @@
             // 
             // btnsalir
             // 
-            this.btnsalir.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(17, 295);
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.Location = new System.Drawing.Point(17, 280);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(74, 44);
             this.btnsalir.TabIndex = 4;
@@ -121,7 +123,7 @@
             this.estadoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.estadoBindingNavigator.Name = "estadoBindingNavigator";
             this.estadoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.estadoBindingNavigator.Size = new System.Drawing.Size(518, 25);
+            this.estadoBindingNavigator.Size = new System.Drawing.Size(570, 25);
             this.estadoBindingNavigator.TabIndex = 5;
             this.estadoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -238,9 +240,9 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.estadoDataGridView.DataSource = this.estadoBindingSource;
-            this.estadoDataGridView.Location = new System.Drawing.Point(249, 119);
+            this.estadoDataGridView.Location = new System.Drawing.Point(297, 119);
             this.estadoDataGridView.Name = "estadoDataGridView";
-            this.estadoDataGridView.Size = new System.Drawing.Size(245, 220);
+            this.estadoDataGridView.Size = new System.Drawing.Size(245, 149);
             this.estadoDataGridView.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -258,14 +260,14 @@
             // identificacionTextBox
             // 
             this.identificacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estadoBindingSource, "Identificacion", true));
-            this.identificacionTextBox.Location = new System.Drawing.Point(130, 123);
+            this.identificacionTextBox.Location = new System.Drawing.Point(156, 123);
             this.identificacionTextBox.Name = "identificacionTextBox";
             this.identificacionTextBox.Size = new System.Drawing.Size(100, 20);
             this.identificacionTextBox.TabIndex = 1;
             // 
             // btnbuscar
             // 
-            this.btnbuscar.Font = new System.Drawing.Font("Gill Sans MT", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.Location = new System.Drawing.Point(156, 149);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(74, 44);
@@ -294,11 +296,21 @@
             this.tableAdapterManager.EstadoTableAdapter = this.estadoTableAdapter;
             this.tableAdapterManager.UpdateOrder = Presentacion.GlovoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(422, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 83);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmConsultaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 367);
+            this.ClientSize = new System.Drawing.Size(570, 331);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(identificacionLabel);
@@ -317,6 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.estadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glovoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +361,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView estadoDataGridView;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
