@@ -46,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbomodopago = new System.Windows.Forms.ComboBox();
+            this.btnatras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,11 +208,23 @@
             this.cbomodopago.Size = new System.Drawing.Size(208, 21);
             this.cbomodopago.TabIndex = 16;
             // 
+            // btnatras
+            // 
+            this.btnatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnatras.Location = new System.Drawing.Point(80, 429);
+            this.btnatras.Name = "btnatras";
+            this.btnatras.Size = new System.Drawing.Size(73, 45);
+            this.btnatras.TabIndex = 17;
+            this.btnatras.Text = "<<<";
+            this.btnatras.UseVisualStyleBackColor = true;
+            this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 496);
+            this.Controls.Add(this.btnatras);
             this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txttelefono);
@@ -257,5 +270,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbomodopago;
+        private System.Windows.Forms.Button btnatras;
     }
 }
