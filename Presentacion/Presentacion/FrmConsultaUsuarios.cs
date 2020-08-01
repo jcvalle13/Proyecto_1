@@ -37,7 +37,7 @@ namespace Presentacion
 
         private void btnatras_Click(object sender, EventArgs e)
         {
-            frmMenu frm = new frmMenu();
+            FrmLogin frm = new FrmLogin();
             frm.Show();
             this.Hide();
         }

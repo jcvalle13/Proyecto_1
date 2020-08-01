@@ -41,11 +41,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnpedir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbomodopago = new System.Windows.Forms.ComboBox();
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbomodopago = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,17 +158,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Modo de pago:";
             // 
-            // cbomodopago
-            // 
-            this.cbomodopago.FormattingEnabled = true;
-            this.cbomodopago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Credit Card"});
-            this.cbomodopago.Location = new System.Drawing.Point(168, 307);
-            this.cbomodopago.Name = "cbomodopago";
-            this.cbomodopago.Size = new System.Drawing.Size(208, 21);
-            this.cbomodopago.TabIndex = 6;
-            // 
             // btnsiguiente
             // 
             this.btnsiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,16 +195,28 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // cbomodopago
+            // 
+            this.cbomodopago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbomodopago.FormattingEnabled = true;
+            this.cbomodopago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Credit Card"});
+            this.cbomodopago.Location = new System.Drawing.Point(168, 312);
+            this.cbomodopago.Name = "cbomodopago";
+            this.cbomodopago.Size = new System.Drawing.Size(208, 21);
+            this.cbomodopago.TabIndex = 16;
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 496);
+            this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsiguiente);
-            this.Controls.Add(this.cbomodopago);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnpedir);
             this.Controls.Add(this.label6);
@@ -251,10 +252,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnpedir;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbomodopago;
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbomodopago;
     }
 }

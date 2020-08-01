@@ -150,7 +150,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(89, 41);
             this.btnatras.TabIndex = 14;
-            this.btnatras.Text = "Menú";
+            this.btnatras.Text = "Salir";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 

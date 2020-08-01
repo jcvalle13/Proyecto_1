@@ -40,7 +40,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(93, 47);
             this.btnatras.TabIndex = 0;
-            this.btnatras.Text = "Menú";
+            this.btnatras.Text = "Salir";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.button1_Click);
             // 

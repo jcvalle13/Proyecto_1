@@ -235,7 +235,7 @@ namespace Presentacion
         {
 
 
-            frmMenu frm = new frmMenu();
+            FrmLogin frm = new FrmLogin();
             frm.Show();
             this.Hide();
         }

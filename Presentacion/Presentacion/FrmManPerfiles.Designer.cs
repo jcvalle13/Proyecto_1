@@ -165,7 +165,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(53, 36);
             this.btnatras.TabIndex = 8;
-            this.btnatras.Text = "Atrás";
+            this.btnatras.Text = "Salir";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnatras_Click);
             // 

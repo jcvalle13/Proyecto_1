@@ -42,9 +42,9 @@
             this.btnenrestaurante = new System.Windows.Forms.Button();
             this.pbcarga2 = new System.Windows.Forms.ProgressBar();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.cboestado = new System.Windows.Forms.ComboBox();
             this.pbcarga3 = new System.Windows.Forms.ProgressBar();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.cboestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvestado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +106,7 @@
             this.btnatras.Name = "btnatras";
             this.btnatras.Size = new System.Drawing.Size(96, 35);
             this.btnatras.TabIndex = 11;
-            this.btnatras.Text = "Menú";
+            this.btnatras.Text = "Salir";
             this.btnatras.UseVisualStyleBackColor = true;
             this.btnatras.Click += new System.EventHandler(this.btnsalir_Click);
             // 
@@ -155,18 +155,6 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // cboestado
-            // 
-            this.cboestado.FormattingEnabled = true;
-            this.cboestado.Items.AddRange(new object[] {
-            "Iniciando",
-            "De Camino",
-            "Entregado"});
-            this.cboestado.Location = new System.Drawing.Point(347, 229);
-            this.cboestado.Name = "cboestado";
-            this.cboestado.Size = new System.Drawing.Size(217, 21);
-            this.cboestado.TabIndex = 2;
-            // 
             // pbcarga3
             // 
             this.pbcarga3.Location = new System.Drawing.Point(70, 303);
@@ -178,13 +166,26 @@
             // 
             this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
+            // cboestado
+            // 
+            this.cboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboestado.FormattingEnabled = true;
+            this.cboestado.Items.AddRange(new object[] {
+            "Iniciando",
+            "De camino\t",
+            "Entregado"});
+            this.cboestado.Location = new System.Drawing.Point(347, 229);
+            this.cboestado.Name = "cboestado";
+            this.cboestado.Size = new System.Drawing.Size(217, 21);
+            this.cboestado.TabIndex = 18;
+            // 
             // FrmEstadoPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 426);
-            this.Controls.Add(this.pbcarga3);
             this.Controls.Add(this.cboestado);
+            this.Controls.Add(this.pbcarga3);
             this.Controls.Add(this.pbcarga2);
             this.Controls.Add(this.btnenrestaurante);
             this.Controls.Add(this.btnentregado);
@@ -220,8 +221,8 @@
         private System.Windows.Forms.Button btnenrestaurante;
         private System.Windows.Forms.ProgressBar pbcarga2;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ComboBox cboestado;
         private System.Windows.Forms.ProgressBar pbcarga3;
         private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.ComboBox cboestado;
     }
 }

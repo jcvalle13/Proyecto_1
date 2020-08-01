@@ -32,7 +32,6 @@
             this.btnmenu = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.cboestado = new System.Windows.Forms.ComboBox();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btneliminar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cboestado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.btnmenu.Name = "btnmenu";
             this.btnmenu.Size = new System.Drawing.Size(100, 44);
             this.btnmenu.TabIndex = 19;
-            this.btnmenu.Text = "Menú";
+            this.btnmenu.Text = "Salir";
             this.btnmenu.UseVisualStyleBackColor = true;
             this.btnmenu.Click += new System.EventHandler(this.btnmenu_Click);
             // 
@@ -75,14 +75,6 @@
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
-            // 
-            // cboestado
-            // 
-            this.cboestado.FormattingEnabled = true;
-            this.cboestado.Location = new System.Drawing.Point(221, 67);
-            this.cboestado.Name = "cboestado";
-            this.cboestado.Size = new System.Drawing.Size(150, 21);
-            this.cboestado.TabIndex = 3;
             // 
             // txtcontraseña
             // 
@@ -148,17 +140,26 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // cboestado
+            // 
+            this.cboestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboestado.FormattingEnabled = true;
+            this.cboestado.Location = new System.Drawing.Point(221, 67);
+            this.cboestado.Name = "cboestado";
+            this.cboestado.Size = new System.Drawing.Size(150, 21);
+            this.cboestado.TabIndex = 22;
+            // 
             // FrmManUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 159);
+            this.Controls.Add(this.cboestado);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmenu);
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
-            this.Controls.Add(this.cboestado);
             this.Controls.Add(this.txtcontraseña);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
@@ -168,7 +169,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmManUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmManUsuarios";
+            this.Text = "Mantenimiento de Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,7 +181,6 @@
         private System.Windows.Forms.Button btnmenu;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.ComboBox cboestado;
         private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label3;
@@ -188,5 +188,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cboestado;
     }
 }
